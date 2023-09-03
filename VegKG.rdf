@@ -1,0 +1,5059 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix foo: <https://w3id.org/def/foo#> .
+@prefix iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
+@prefix metadata: <http://data.bioontology.org/metadata/> .
+@prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix ns1: <http://purl.org/vocab/vann/> .
+@prefix ns2: <https://w3id.org/def/foo#C:> .
+@prefix ns3: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix wo: <https://www.bbc.co.uk/ontologies/wildlife-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+metadata:prefixIRI a owl:AnnotationProperty .
+
+iot-lite:relativeLocation a owl:AnnotationProperty .
+
+terms:Frequency a owl:Class ;
+    rdfs:label "Frequency"@en ;
+    metadata:prefixIRI "terms:Frequency" ;
+    rdfs:comment "A rate at which something recurs."@en ;
+    rdfs:isDefinedBy terms: ;
+    rdfs:subClassOf owl:Thing .
+
+terms:PhysicalResource a owl:Class ;
+    rdfs:label "Physical Resource"@en ;
+    metadata:prefixIRI "terms:PhysicalResource" ;
+    rdfs:comment "A material thing."@en ;
+    rdfs:isDefinedBy terms: ;
+    rdfs:subClassOf owl:Thing .
+
+terms:Policy a owl:Class ;
+    rdfs:label "Policy"@en ;
+    metadata:prefixIRI "terms:Policy" ;
+    rdfs:comment "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."@en ;
+    rdfs:isDefinedBy terms: ;
+    rdfs:subClassOf owl:Thing ;
+    owl:disjointWith terms:ProvenanceStatement .
+
+terms:description a owl:AnnotationProperty .
+
+terms:isPartOf rdfs:label "Is Part Of"@en ;
+    terms:description "This property is intended to be used with non-literal values. This property is an inverse property of Has Part."@en ;
+    rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
+    rdfs:isDefinedBy terms: .
+
+terms:license a owl:AnnotationProperty ;
+    terms:license <https://creativecommons.org/licenses/by-sa/4.0/> .
+
+terms:relation a owl:AnnotationProperty .
+
+terms:rights a owl:AnnotationProperty .
+
+terms:title a owl:AnnotationProperty ;
+    terms:title "Forest Observatory Ontology (FOO)" .
+
+ns1:preferredNamespacePrefix a owl:AnnotationProperty ;
+    ns1:preferredNamespacePrefix "foo" .
+
+ns1:preferredNamespaceUri a owl:AnnotationProperty ;
+    ns1:preferredNamespaceUri "https://w3id.org/def/foo#>" .
+
+schema:domainIncludes a owl:AnnotationProperty .
+
+schema:rangeIncludes a owl:AnnotationProperty .
+
+<http://web.resource.org/cc/License> a owl:Class ;
+    rdfs:subClassOf terms:LicenseDocument .
+
+<http://web.resource.org/cc/Prohibition> a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+<http://web.resource.org/cc/Requirement> a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+<http://web.resource.org/cc/Work> a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+<http://www.w3.org/1999/xhtml/vocab#license> a owl:NamedIndividual .
+
+<http://www.w3.org/2001/XMLSchema-datatypes#date> a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#> rdfs:label "geo" ;
+    rdfs:comment """\r
+Recent changes to this namespace:\r
+$Log: wgs84_pos.rdf,v $\r
+Revision 1.22  2009/04/20 15:00:30  timbl\r
+Remove the time bits which have been deal with elsewhere eg in iCal.\r
+\r
+Revision 1.21  2009/04/20 12:52:47  timbl\r
+try again\r
+\r
+Revision 1.20  2009/04/20 12:42:11  timbl\r
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\r
+\r
+Revision 1.19  2009/04/20 12:36:31  timbl\r
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\r
+\r
+Revision 1.18  2006/02/01 22:01:04  danbri\r
+Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\r
+\r
+Revision 1.17  2004/02/06 17:38:12  danbri\r
+Fixed a bad commit screwup\r
+\r
+Revision 1.15  2003/04/19 11:24:08  danbri\r
+Fixed the typo even more.\r
+\r
+Revision 1.14  2003/04/19 11:16:56  danbri\r
+fixed a typo\r
+\r
+Revision 1.13  2003/02/19 22:27:27  connolly\r
+relaxed domain constraints on lat/long/alt from Point to SpatialThing\r
+\r
+Revision 1.12  2003/01/12 01:41:41  danbri\r
+Trying local copy of XSLT doc.\r
+\r
+Revision 1.11  2003/01/12 01:20:18  danbri\r
+added a link to morten's xslt rdfs viewer.\r
+\r
+Revision 1.10  2003/01/11 18:56:49  danbri\r
+Removed datatype range from lat and long properties, since they would\r
+have required each occurance of the property to mention the datatype.\r
+\r
+Revision 1.9  2003/01/11 11:41:31  danbri\r
+Another typo; repaired rdfs:Property to rdf:Property x4\r
+\r
+Revision 1.8  2003/01/11 11:05:02  danbri\r
+Added an rdfs:range for each lat/long/alt property,\r
+http://www.w3.org/2001/XMLSchema#float\r
+\r
+Revision 1.7  2003/01/10 20:25:16  danbri\r
+Longer rdfs:comment for Point, trying to be Earth-centric and neutral about\r
+coordinate system(s) at the same time. Feedback welcomed.\r
+\r
+Revision 1.6  2003/01/10 20:18:30  danbri\r
+Added CVS log comments into the RDF/XML as an rdfs:comment property of the\r
+vocabulary. Note that this is not common practice (but seems both harmless\r
+and potentially useful).\r
+\r
+\r
+revision 1.5\r
+date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\r
+Updated schema:\r
+Added a dc:date, added url for more info. Changed the rdfs:label of the\r
+namespace from gp to geo. Added a class Point, set as the rdfs:domain of\r
+each property. Added XML comment on the lat_long property suggesting that\r
+we might not need it (based on #rdfig commentary from implementors).\r
+\r
+revision 1.4\r
+date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\r
+Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\r
+#rdfig for catching this error.\r
+\r
+revision 1.3\r
+date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\r
+fixed buglet in vocab, added more wgs links\r
+\r
+revision 1.2\r
+date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\r
+Removed alt from the as-a-flat-string property, and switched from\r
+space separated to comma separated.\r
+\r
+revision 1.1\r
+date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\r
+basic geo vocab\r
+\r
+""" .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> a owl:ObjectProperty ;
+    rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+    rdfs:range [ a owl:Restriction ;
+            owl:onProperty foo:hasValue ;
+            owl:someValuesFrom rdfs:Literal ] .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> a owl:ObjectProperty ;
+    rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+    rdfs:range [ a owl:Restriction ;
+            owl:onProperty foo:hasValue ;
+            owl:someValuesFrom rdfs:Literal ] .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdfs:label "lat/long" ;
+    rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> a owl:ObjectProperty ;
+    rdfs:label "location" ;
+    rdfs:comment """The relation between something and the point, \r
+ or other geometrical thing in space, where it is.  For example, the realtionship between\r
+ a radio tower and a Point with a given lat and long.\r
+ Or a relationship between a park and its outline as a closed arc of points, or a road and\r
+ its location as a arc (a sequence of points).\r
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\r
+ an accuracy appropriate for the size of the object and uses such as mapping .\r
+ """ ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+    rdfs:subPropertyOf foaf:based_near .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> a owl:ObjectProperty ;
+    rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+    rdfs:range [ a owl:Restriction ;
+            owl:onProperty foo:hasValue ;
+            owl:someValuesFrom rdfs:Literal ] .
+
+ns:term_status a owl:AnnotationProperty .
+
+skos:example a owl:AnnotationProperty .
+
+sosa:hasFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range sosa:FeatureOfInterest .
+
+sosa:hasResult a owl:DatatypeProperty ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range rdfs:Literal .
+
+sosa:hasSample a owl:ObjectProperty ;
+    rdfs:domain sosa:FeatureOfInterest ;
+    rdfs:range sosa:Observation .
+
+sosa:hasSimpleResult a owl:DatatypeProperty ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range rdfs:Literal .
+
+sosa:hosts a owl:ObjectProperty ;
+    rdfs:domain sosa:Platform ;
+    rdfs:range sosa:Sensor ;
+    owl:propertyDisjointWith sosa:observes .
+
+sosa:isFeatureOfInterestOf a owl:ObjectProperty ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range sosa:FeatureOfInterest ;
+    skos:definition "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en .
+
+sosa:isObservedBy a owl:ObjectProperty ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range sosa:ObservableProperty .
+
+sosa:madeBySensor a owl:ObjectProperty ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range sosa:Observation .
+
+sosa:madeObservation a owl:ObjectProperty ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range sosa:Sensor .
+
+sosa:observedProperty a owl:ObjectProperty ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range sosa:ObservableProperty .
+
+sosa:resultTime a owl:DatatypeProperty ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range xsd:dateTime .
+
+foaf:Person a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+foo:CameraTrap a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "Wildlife cameras with embeded sensors to capture moving objects." ;
+    sosa:hasFeatureOfInterest foo:image ;
+    sosa:hasResult "Image" ;
+    sosa:observedProperty foo:Name,
+        foo:Path,
+        foo:localDate,
+        foo:localTime,
+        foo:make,
+        foo:model ;
+    foo:hasMake "\"make\"" ;
+    foo:hasModel "model" ;
+    foo:hasPath "dfgcimage.org"^^xsd:anyURI .
+
+foo:Civets a owl:NamedIndividual,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Viverridae>,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Carnivora>,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata> .
+
+foo:Clay a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    foo:hasClay "2.3"^^xsd:float .
+
+foo:DGFC_ID a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "An identifier that is unique for GPS collar sensor observation" ;
+    sosa:hasResult "ID" .
+
+foo:DanumBRL a sosa:Observation ;
+    foo:Date "08/10/2017",
+        "09/07/2017" ;
+    foo:Liana_dbh_cm "10.2",
+        "11.1",
+        "12",
+        "15",
+        "17.3",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "4.9",
+        "5",
+        "5.2",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "6",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.7",
+        "7",
+        "7.2",
+        "7.3",
+        "7.8",
+        "7.9",
+        "8",
+        "8.2",
+        "8.3",
+        "8.5",
+        "9",
+        "9.2",
+        "9.3",
+        "9.6" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F4P1",
+        "F4P2",
+        "F4P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Actinodaphne",
+        "Aglaia",
+        "Aglaia silvestris",
+        "Alangium javanicum",
+        "Aporosa",
+        "Aporosa grandistipula",
+        "Baccaurea",
+        "Barringtonia lanceolata",
+        "Buchanania",
+        "Canarium denticulatum",
+        "Chisocheton",
+        "Chisocheton sarawakensis",
+        "Cleistanthus",
+        "Cleistanthus myrianthus",
+        "Dehaasia",
+        "Dimocarpus",
+        "Dimocarpus longan",
+        "Drypetes",
+        "Dysoxylum",
+        "Glochidion",
+        "Knema",
+        "Knema latericia",
+        "Lithocarpus gracilis",
+        "Litsea",
+        "Ochanostachys amentacea",
+        "Octomeles sumatrana",
+        "Paranephelium macrophyllum",
+        "Parashorea malaanonan",
+        "Parashorea tomentella",
+        "Payena acuminata",
+        "Pentace",
+        "Pentace laxiflora",
+        "Polyalthia",
+        "Shorea",
+        "Shorea gibbosa",
+        "Shorea johorensis",
+        "Shorea superba",
+        "Syzygium" ;
+    foo:Tree_N_lianas "1",
+        "10",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9" ;
+    foo:Tree_dbh_cm "10.5",
+        "10.6",
+        "100",
+        "11.8",
+        "11.9",
+        "12.4",
+        "12.9",
+        "13",
+        "13.9",
+        "14",
+        "14.2",
+        "14.3",
+        "14.5",
+        "14.6",
+        "140",
+        "15",
+        "15.5",
+        "16",
+        "17",
+        "17.5",
+        "18",
+        "19",
+        "19.2",
+        "20",
+        "20.5",
+        "20.7",
+        "20.8",
+        "21",
+        "21.5",
+        "23",
+        "23.6",
+        "23.8",
+        "24.6",
+        "25",
+        "26",
+        "26.5",
+        "27.8",
+        "28",
+        "28.3",
+        "29.6",
+        "29.8",
+        "29.9",
+        "30",
+        "31.2",
+        "32.7",
+        "35",
+        "36.3",
+        "37.6",
+        "38",
+        "40",
+        "42",
+        "48",
+        "50",
+        "60",
+        "70",
+        "72",
+        "85" ;
+    foo:Tree_height_m "10",
+        "12",
+        "13",
+        "14",
+        "15",
+        "18",
+        "20",
+        "35",
+        "45",
+        "50",
+        "55",
+        "NA" ;
+    foo:Tree_individual_no "1497",
+        "1498",
+        "1501",
+        "1505",
+        "1507",
+        "1508",
+        "1509",
+        "1519",
+        "1521",
+        "1524",
+        "1525",
+        "1526",
+        "1531",
+        "1532",
+        "1534",
+        "1536",
+        "1537",
+        "1547",
+        "1551",
+        "1557",
+        "1558",
+        "1560",
+        "1564",
+        "1566",
+        "1576",
+        "1578",
+        "1581",
+        "1583",
+        "1585",
+        "1588",
+        "1590",
+        "1594",
+        "1596",
+        "1599",
+        "1601",
+        "1602",
+        "1604",
+        "1605",
+        "1616",
+        "1621",
+        "1624",
+        "1626",
+        "1627",
+        "1631",
+        "481",
+        "482",
+        "484",
+        "485",
+        "486",
+        "488",
+        "490",
+        "496",
+        "499",
+        "502",
+        "507",
+        "510",
+        "511",
+        "512",
+        "513",
+        "514",
+        "515",
+        "516",
+        "521",
+        "528",
+        "533",
+        "535",
+        "539",
+        "540",
+        "541",
+        "542",
+        "544",
+        "545" ;
+    foo:Tree_notes "" .
+
+foo:DanumCoupe88 a sosa:Observation ;
+    foo:Date "24/10/2017",
+        "27/10/2017" ;
+    foo:Liana_dbh_cm "10",
+        "10.2",
+        "10.5",
+        "10.7",
+        "11",
+        "12",
+        "12.2",
+        "13",
+        "16",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.7",
+        "2.8",
+        "3",
+        "3.3",
+        "3.5",
+        "3.6",
+        "3.7",
+        "4",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "5",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.9",
+        "6",
+        "6.1",
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.7",
+        "6.8",
+        "7",
+        "7.1",
+        "7.4",
+        "7.5",
+        "7.8",
+        "8",
+        "8.2",
+        "8.4",
+        "8.8" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F17P1",
+        "F17P2",
+        "F17P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Aporosa",
+        "Barringtonia lanceolata",
+        "Callicarpa",
+        "Canarium",
+        "Carallia brachiata",
+        "Croton",
+        "Dehaasia",
+        "Diospyros",
+        "Dipterocarpus ",
+        "Dipterocarpus caudiferus",
+        "Drypetes",
+        "Fagraea",
+        "Guioa",
+        "Hopea nervosa",
+        "Koilodepas longifolium",
+        "Madhuca kingiana",
+        "Mallotus wrayi",
+        "Neesia synandra",
+        "Ochanostachys amentacea",
+        "Parkia speciosa",
+        "Psydrax",
+        "Pternandra",
+        "Santiria",
+        "Scorodocarpus borneensis",
+        "Shorea fallax",
+        "Shorea johorensis",
+        "Shorea leptoderma",
+        "Shorea macrophylla",
+        "Shorea ovalis",
+        "Shorea pauciflora",
+        "Shorea superba",
+        "Vatica",
+        "Vatica dulitensis" ;
+    foo:Tree_N_lianas "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7" ;
+    foo:Tree_dbh_cm "10",
+        "11",
+        "11.6",
+        "12.5",
+        "12.7",
+        "13.3",
+        "14",
+        "14.2",
+        "14.5",
+        "15",
+        "17",
+        "17.3",
+        "17.5",
+        "19.5",
+        "22.5",
+        "24.3",
+        "25",
+        "25.8",
+        "26",
+        "26.4",
+        "26.6",
+        "27",
+        "29.2",
+        "29.8",
+        "30",
+        "32",
+        "33",
+        "35",
+        "36",
+        "36.2",
+        "37",
+        "38",
+        "42",
+        "45",
+        "46",
+        "50",
+        "54",
+        "55",
+        "65",
+        "70",
+        "80",
+        "95" ;
+    foo:Tree_height_m "11",
+        "12",
+        "13",
+        "15",
+        "17",
+        "19",
+        "20",
+        "22",
+        "23",
+        "37",
+        "45",
+        "47",
+        "50",
+        "NA" ;
+    foo:Tree_individual_no "3378",
+        "3382",
+        "3385",
+        "3394",
+        "3400",
+        "3410",
+        "3411",
+        "3412",
+        "3415",
+        "3420",
+        "3421",
+        "3425",
+        "3426",
+        "3428",
+        "3432",
+        "3433",
+        "3436",
+        "3440",
+        "3441",
+        "3445",
+        "3447",
+        "3449",
+        "3454",
+        "3467",
+        "3484",
+        "3489",
+        "3498",
+        "3501",
+        "3503",
+        "3510",
+        "3514",
+        "3515",
+        "3516",
+        "3518",
+        "3523",
+        "3525",
+        "3528",
+        "3531",
+        "3533",
+        "3536",
+        "3538",
+        "3728",
+        "3736",
+        "3738",
+        "3739",
+        "3741",
+        "3744",
+        "3752",
+        "3754",
+        "3759",
+        "3760",
+        "3761",
+        "3763",
+        "3765",
+        "3770",
+        "3772",
+        "3778",
+        "3780",
+        "3781",
+        "3782" ;
+    foo:Tree_notes "" .
+
+foo:DanumMalua a sosa:Observation ;
+    foo:Date "25/10/2017",
+        "28/10/2017" ;
+    foo:Liana_dbh_cm "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.9",
+        "5",
+        "5.2",
+        "5.4",
+        "5.5",
+        "5.8",
+        "6",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.7",
+        "7",
+        "7.4",
+        "7.6",
+        "7.8",
+        "8",
+        "8.2",
+        "9.5",
+        "9.8" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F18P1",
+        "F18P2",
+        "F18P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Aglaia",
+        "Alangium javanicum",
+        "Callicarpa",
+        "Chisocheton sarawakensis",
+        "Dehaasia",
+        "Dipterocarpus caudiferus",
+        "Drypetes",
+        "Eusideroxylon zwageri",
+        "Lithocarpus",
+        "Macaranga gigantea",
+        "Macaranga hypoleuca",
+        "Madhuca korthalsii",
+        "Mallotus wrayi",
+        "Monoon",
+        "Paranephelium",
+        "Parashorea malaanonan",
+        "Polyalthia sumatrana",
+        "Prunus",
+        "Santiria",
+        "Shorea",
+        "Shorea fallax",
+        "Shorea johorensis",
+        "Sindora",
+        "Vatica",
+        "Xanthophyllum" ;
+    foo:Tree_N_lianas "1",
+        "11",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7" ;
+    foo:Tree_dbh_cm "11.5",
+        "13.5",
+        "15",
+        "16",
+        "17.2",
+        "17.5",
+        "18.5",
+        "19",
+        "19.5",
+        "20",
+        "20.4",
+        "21.7",
+        "21.9",
+        "22",
+        "24",
+        "25",
+        "29.9",
+        "30",
+        "32",
+        "34.8",
+        "35",
+        "39",
+        "40",
+        "45",
+        "47",
+        "48",
+        "50",
+        "52",
+        "55",
+        "60",
+        "65",
+        "78",
+        "85" ;
+    foo:Tree_height_m "12",
+        "13",
+        "15",
+        "17",
+        "18",
+        "20",
+        "22",
+        "25",
+        "27",
+        "30",
+        "40",
+        "50",
+        "NA" ;
+    foo:Tree_individual_no "3599",
+        "3605",
+        "3606",
+        "3622",
+        "3624",
+        "3625",
+        "3642",
+        "3673",
+        "3680",
+        "3683",
+        "3685",
+        "3693",
+        "3696",
+        "3702",
+        "3704",
+        "3708",
+        "3790",
+        "3799",
+        "3811",
+        "3826",
+        "3827",
+        "3829",
+        "3834",
+        "3835",
+        "3837",
+        "3838",
+        "3840",
+        "3841",
+        "3845",
+        "3846",
+        "3852",
+        "3859",
+        "3863",
+        "3864",
+        "3872",
+        "3892",
+        "3893",
+        "3895" ;
+    foo:Tree_notes "" .
+
+foo:DanumW15 a sosa:Observation ;
+    foo:Date "21/07/2017",
+        "22/07/2017",
+        "23/07/2017" ;
+    foo:Liana_dbh_cm "10",
+        "10.3",
+        "10.8",
+        "11.2",
+        "11.7",
+        "12",
+        "12.2",
+        "12.8",
+        "16",
+        "18",
+        "2",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.4",
+        "3.5",
+        "3.8",
+        "4",
+        "4.2",
+        "4.5",
+        "4.8",
+        "4.9",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.9",
+        "6",
+        "6.2",
+        "6.8",
+        "7",
+        "7.5",
+        "7.8",
+        "8",
+        "8.2",
+        "8.3",
+        "9",
+        "9.8" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F1P1",
+        "F1P2",
+        "F1P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Aglaia",
+        "Allophylus cobbe",
+        "Aporosa elmeri",
+        "Canarium denticulatum",
+        "Dehaasia",
+        "Diospyros",
+        "Dysoxylum alliaceum",
+        "Garcinia",
+        "Lansium domesticum",
+        "Lithocarpus",
+        "Litsea",
+        "Litsea grandis",
+        "Mallotus wrayi",
+        "Meliosma sumatrana",
+        "Parashorea tomentella",
+        "Pternandra",
+        "Shorea",
+        "Shorea argentifolia",
+        "Shorea fallax",
+        "Shorea johorensis",
+        "Shorea parvifolia",
+        "Shorea pauciflora",
+        "Syzygium",
+        "Vatica sarawakensis" ;
+    foo:Tree_N_lianas "1",
+        "12",
+        "2",
+        "3",
+        "5",
+        "6",
+        "8" ;
+    foo:Tree_dbh_cm "10.9",
+        "105",
+        "105.5",
+        "110",
+        "115",
+        "13",
+        "13.6",
+        "14.3",
+        "14.9",
+        "15.6",
+        "16",
+        "16.7",
+        "17",
+        "23.7",
+        "24",
+        "24.5",
+        "25.5",
+        "28",
+        "29",
+        "32",
+        "34",
+        "34.2",
+        "36",
+        "37.5",
+        "39",
+        "40.5",
+        "43",
+        "44",
+        "47.5",
+        "52",
+        "55",
+        "55.5",
+        "60",
+        "62.7",
+        "65",
+        "75" ;
+    foo:Tree_height_m "10",
+        "12",
+        "15",
+        "16",
+        "20",
+        "22",
+        "57",
+        "60",
+        "NA" ;
+    foo:Tree_individual_no "102",
+        "11",
+        "116",
+        "128",
+        "129",
+        "17",
+        "18",
+        "19",
+        "2",
+        "21",
+        "22",
+        "24",
+        "27",
+        "28",
+        "29",
+        "3",
+        "31",
+        "32",
+        "34",
+        "35",
+        "37",
+        "40",
+        "41",
+        "43",
+        "45",
+        "47",
+        "49",
+        "5",
+        "57",
+        "58",
+        "65",
+        "66",
+        "67",
+        "7",
+        "72",
+        "74",
+        "85",
+        "9",
+        "99" ;
+    foo:Tree_notes "" .
+
+foo:DanumW16 a sosa:Observation ;
+    foo:Date "23/07/2017" ;
+    foo:Liana_dbh_cm "7.6" ;
+    foo:Plot_no "3" ;
+    foo:Site_plot_code "F1P3" ;
+    foo:Subplot_radius_m "30" ;
+    foo:Tree_ID "Lithocarpus" ;
+    foo:Tree_N_lianas "2" ;
+    foo:Tree_dbh_cm "36" ;
+    foo:Tree_height_m "NA" ;
+    foo:Tree_individual_no "45" ;
+    foo:Tree_notes "" .
+
+foo:Disturbance a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "degree of logging at the site, on of \"Old-growth\", \"Twic logged\", Logged\" (when number of logging operations unknown)" ;
+    foo:hasDisturbance "logged" .
+
+foo:ElephasMaximus a owl:NamedIndividual,
+        sosa:FeatureOfInterest .
+
+foo:Elevation_masl a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Elevation at the plot centre, in metres above sea level" ;
+    foo:hasElevation_masi "5.2"^^xsd:float .
+
+foo:First_planting_nearest_OP a owl:NamedIndividual ;
+    skos:definition "Year palm adjacent to the forest site" ;
+    foo:hasFirst_planning_nearest_OP "2005" .
+
+foo:Forest_type a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "type of forest site, one of \"Continous primary\", \"Continous logged\", \"HCV\" (i.e., High Conservation Value; fragmented sites in oil palm plantations)" ;
+    sosa:hasSimpleResult "HCV High Conservation Value" .
+
+foo:ID a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasResult "\"foo_\"" .
+
+foo:Kiabau25ha a sosa:Observation ;
+    foo:Date "19/09/2017",
+        "20/09/2017",
+        "22/09/2017" ;
+    foo:Liana_dbh_cm "10",
+        "11.1",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.7",
+        "4.9",
+        "5",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.8",
+        "5.9",
+        "6",
+        "6.2",
+        "6.3",
+        "6.5",
+        "7",
+        "7.3",
+        "7.5",
+        "7.8",
+        "8",
+        "9",
+        "9.3" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F8P1",
+        "F8P2",
+        "F8P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Adinandra ",
+        "Artocarpus",
+        "Brownlowia",
+        "Calophyllum",
+        "Canarium",
+        "Chionanthus",
+        "Cleistanthus",
+        "Dehaasia",
+        "Dillenia",
+        "Dillenia excelsa",
+        "Dipterocarpus",
+        "Drypetes",
+        "Durio",
+        "Dysoxylum",
+        "Elaeocarpus",
+        "Excoecaria philippinensis",
+        "Gironniera subaequalis",
+        "Glochidion",
+        "Hopea",
+        "Knema",
+        "Lepisanthes",
+        "Lithocarpus",
+        "Litsea",
+        "Macaranga",
+        "Magnolia",
+        "Monoon",
+        "Nauclea",
+        "Palaquium",
+        "Palaquium dasyphyllum",
+        "Polyalthia",
+        "Scaphium",
+        "Shorea",
+        "Syzygium" ;
+    foo:Tree_N_lianas "1",
+        "10",
+        "11",
+        "15",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9" ;
+    foo:Tree_dbh_cm "10",
+        "10.2",
+        "10.5",
+        "11",
+        "11.1",
+        "11.2",
+        "11.6",
+        "12",
+        "12.3",
+        "12.9",
+        "13",
+        "13.2",
+        "13.5",
+        "13.6",
+        "14",
+        "15.4",
+        "16",
+        "17",
+        "17.1",
+        "17.3",
+        "18.2",
+        "18.4",
+        "18.5",
+        "19",
+        "20.8",
+        "21",
+        "21.7",
+        "22",
+        "22.7",
+        "22.8",
+        "22.9",
+        "23",
+        "23.2",
+        "23.3",
+        "24",
+        "24.2",
+        "24.6",
+        "25",
+        "25.1",
+        "25.3",
+        "25.5",
+        "26.3",
+        "27",
+        "28",
+        "28.7",
+        "28.8",
+        "29",
+        "29.3",
+        "29.4",
+        "30",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36.5",
+        "39",
+        "42.8",
+        "48.4",
+        "53",
+        "55",
+        "60",
+        "65" ;
+    foo:Tree_height_m "10",
+        "11",
+        "12",
+        "13",
+        "15",
+        "16",
+        "18",
+        "20",
+        "25",
+        "27",
+        "38",
+        "40",
+        "7",
+        "NA" ;
+    foo:Tree_individual_no "1050",
+        "1052",
+        "1058",
+        "1061",
+        "1062",
+        "1069",
+        "1071",
+        "1079",
+        "1081",
+        "1089",
+        "1091",
+        "1092",
+        "1106",
+        "1107",
+        "1131",
+        "1140",
+        "1141",
+        "1144",
+        "1146",
+        "1147",
+        "1148",
+        "1149",
+        "1150",
+        "1152",
+        "1154",
+        "1158",
+        "1159",
+        "1165",
+        "1166",
+        "1167",
+        "1168",
+        "1169",
+        "1171",
+        "1172",
+        "1173",
+        "1174",
+        "1175",
+        "1176",
+        "1177",
+        "1178",
+        "1179",
+        "1180",
+        "1181",
+        "1182",
+        "1183",
+        "1196",
+        "1198",
+        "1199",
+        "1200",
+        "1201",
+        "1203",
+        "1204",
+        "1206",
+        "1222",
+        "1319",
+        "1321",
+        "1322",
+        "1326",
+        "1329",
+        "1332",
+        "1334",
+        "1338",
+        "1343",
+        "1345",
+        "1347",
+        "1349",
+        "1350",
+        "1351",
+        "1353",
+        "1358",
+        "1362",
+        "1363",
+        "1365",
+        "1377",
+        "1379",
+        "1384" ;
+    foo:Tree_notes "",
+        "Based on S4",
+        "Based on S7",
+        "Multiple stems",
+        "S10 in press. Given to FRC as sample 1. White sap.",
+        "Sample IDed by Mike and Postar. S7 (same as S3 collected) ",
+        "Sample IDed by Postar. S2" .
+
+foo:Kiabau9ha a sosa:Observation ;
+    foo:Date "22/08/2017",
+        "22/09/2017" ;
+    foo:Liana_dbh_cm "10",
+        "10.2",
+        "10.5",
+        "11.3",
+        "13",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.5",
+        "2.8",
+        "3",
+        "3.2",
+        "3.3",
+        "3.5",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.5",
+        "4.6",
+        "5",
+        "5.2",
+        "5.6",
+        "5.8",
+        "6",
+        "7",
+        "7.3",
+        "7.7",
+        "8",
+        "8.9",
+        "9",
+        "9.2" ;
+    foo:Plot_no "1",
+        "2" ;
+    foo:Site_plot_code "F7P1",
+        "F7P2" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Aporosa",
+        "Artocarpus",
+        "Beilschmiedia",
+        "Chisocheton",
+        "Dipterocarpus",
+        "Dipterocarpus caudiferus",
+        "Dryobalanops beccarii",
+        "Drypetes",
+        "Elaeocarpus",
+        "Endospermum",
+        "Eusideroxylon zwageri",
+        "Fagraea belukar",
+        "Hydnocarpus",
+        "Irvingia malayana",
+        "Lithocarpus gracilis",
+        "Litsea",
+        "Mallotus",
+        "Nauclea",
+        "Ochanostachys amentacea",
+        "Palaquium dasyphyllum",
+        "Scaphium",
+        "Shorea",
+        "Shorea fallax",
+        "Terminalia" ;
+    foo:Tree_N_lianas "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "9" ;
+    foo:Tree_dbh_cm "10.2",
+        "10.5",
+        "11",
+        "11.2",
+        "12.2",
+        "12.5",
+        "12.8",
+        "13.8",
+        "14",
+        "14.3",
+        "14.5",
+        "15.2",
+        "15.3",
+        "16",
+        "16.1",
+        "17.2",
+        "18.2",
+        "19.2",
+        "20",
+        "21.5",
+        "21.8",
+        "22",
+        "22.2",
+        "23.7",
+        "24.1",
+        "24.5",
+        "25.5",
+        "26.4",
+        "26.5",
+        "26.7",
+        "26.9",
+        "27",
+        "27.5",
+        "28.8",
+        "29",
+        "29.2",
+        "30",
+        "30.5",
+        "31.6",
+        "33",
+        "34.5",
+        "36.5",
+        "37.5",
+        "38.5",
+        "39.3",
+        "46.5",
+        "50",
+        "52",
+        "55",
+        "70" ;
+    foo:Tree_height_m "10",
+        "12",
+        "13",
+        "14",
+        "15",
+        "17",
+        "20",
+        "22",
+        "25",
+        "30",
+        "35",
+        "40",
+        "NA" ;
+    foo:Tree_individual_no "1000",
+        "1003",
+        "1005",
+        "1006",
+        "1007",
+        "1014",
+        "1016",
+        "1022",
+        "1026",
+        "1028",
+        "1029",
+        "1037",
+        "1038",
+        "1042",
+        "1044",
+        "1390",
+        "1394",
+        "1414",
+        "1415",
+        "1424",
+        "1425",
+        "1426",
+        "1427",
+        "1431",
+        "1436",
+        "1443",
+        "1444",
+        "1452",
+        "1455",
+        "1456",
+        "1457",
+        "1462",
+        "1465",
+        "1468",
+        "1470",
+        "1474",
+        "1476",
+        "1479",
+        "1480",
+        "1481",
+        "1485",
+        "1487",
+        "1489",
+        "1490",
+        "944",
+        "977",
+        "982",
+        "983",
+        "984",
+        "985",
+        "989",
+        "991",
+        "992",
+        "994",
+        "996",
+        "998" ;
+    foo:Tree_notes "",
+        "Multiple stems",
+        "Sample IDed by Mike",
+        "Sample IDed by Postar. S11" .
+
+foo:Lat a owl:NamedIndividual,
+        <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+    rdfs:comment "The geographical latitude of the observation location" .
+
+foo:Long a owl:NamedIndividual,
+        <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+    rdfs:comment "The geographical longitude of a sensor observation location" .
+
+foo:Loxodonta a owl:NamedIndividual,
+        sosa:FeatureOfInterest ;
+    rdfs:comment "African elephant" .
+
+foo:Otter a owl:NamedIndividual,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Carnivora>,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata> ;
+    rdfs:comment "Otter is a carnivorous mammal." .
+
+foo:RekaHalus12ha a sosa:Observation ;
+    foo:Date "16/08/2017",
+        "18/08/2017" ;
+    foo:Liana_dbh_cm "11.5",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.5",
+        "4.8",
+        "5",
+        "5.1",
+        "5.2",
+        "5.5",
+        "5.7",
+        "6",
+        "6.2",
+        "6.5",
+        "7",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5",
+        "8",
+        "8.8",
+        "9" ;
+    foo:Plot_no "1",
+        "2" ;
+    foo:Site_plot_code "F6P1",
+        "F6P2" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Alangium javanicum",
+        "Artocarpus",
+        "Calophyllum",
+        "Chisocheton",
+        "Dehaasia",
+        "Dillenia excelsa",
+        "Diospyros",
+        "Fagraea",
+        "Ficus",
+        "Glochidion",
+        "Glochidion borneensis",
+        "Litsea",
+        "Macaranga gigantea",
+        "Macaranga pearsonii",
+        "Mallotus wrayi",
+        "Paranephelium",
+        "Parashorea tomentella",
+        "Pterospermum",
+        "Shorea",
+        "Syzygium" ;
+    foo:Tree_N_lianas "1",
+        "11",
+        "14",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8" ;
+    foo:Tree_dbh_cm "10.6",
+        "100",
+        "11.5",
+        "11.7",
+        "12.7",
+        "13",
+        "13.3",
+        "13.5",
+        "15",
+        "16",
+        "16.4",
+        "16.5",
+        "17.8",
+        "18",
+        "20",
+        "20.5",
+        "22.5",
+        "23",
+        "23.5",
+        "23.8",
+        "26",
+        "26.4",
+        "27",
+        "28",
+        "29",
+        "30.2",
+        "30.5",
+        "32",
+        "34.2",
+        "35",
+        "37",
+        "38",
+        "39.5",
+        "46",
+        "50",
+        "63" ;
+    foo:Tree_height_m "10",
+        "12",
+        "13",
+        "15",
+        "25",
+        "30",
+        "5",
+        "8",
+        "NA" ;
+    foo:Tree_individual_no "826",
+        "831",
+        "839",
+        "841",
+        "845",
+        "846",
+        "848",
+        "854",
+        "856",
+        "857",
+        "859",
+        "861",
+        "862",
+        "863",
+        "864",
+        "865",
+        "866",
+        "867",
+        "869",
+        "870",
+        "872",
+        "874",
+        "877",
+        "891",
+        "893",
+        "896",
+        "898",
+        "902",
+        "903",
+        "904",
+        "911",
+        "912",
+        "913",
+        "914",
+        "915",
+        "916",
+        "917",
+        "920",
+        "921",
+        "928",
+        "930",
+        "932" ;
+    foo:Tree_notes "",
+        "Multiple stems",
+        "Tree nearly dead" .
+
+foo:RekaHalus52ha a sosa:Observation ;
+    foo:Date "14/08/2017",
+        "15/08/2017" ;
+    foo:Liana_dbh_cm "10",
+        "12.4",
+        "15",
+        "16",
+        "2",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.8",
+        "3.9",
+        "4",
+        "4.2",
+        "4.3",
+        "4.5",
+        "4.6",
+        "5",
+        "5.2",
+        "5.5",
+        "5.6",
+        "5.7",
+        "6",
+        "6.5",
+        "6.8",
+        "7",
+        "7.6",
+        "8",
+        "8.2",
+        "8.4",
+        "9" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F5P1",
+        "F5P2",
+        "F5P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Barringtonia",
+        "Chisocheton sarawakensis",
+        "Croton",
+        "Dehaasia",
+        "Dryobalanops beccarii",
+        "Ficus",
+        "Glaucidium",
+        "Hopea nervosa",
+        "Lithocarpus",
+        "Neonauclea",
+        "Scaphium macropodum",
+        "Semecarpus glaucas",
+        "Shorea",
+        "Shorea macroptera",
+        "Vatica",
+        "Walsura pinnata" ;
+    foo:Tree_N_lianas "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6" ;
+    foo:Tree_dbh_cm "10",
+        "10.3",
+        "10.5",
+        "10.8",
+        "12",
+        "14",
+        "15",
+        "16",
+        "16.2",
+        "16.5",
+        "17.5",
+        "18",
+        "18.3",
+        "18.5",
+        "20.5",
+        "21.8",
+        "21.9",
+        "22",
+        "23.5",
+        "26.2",
+        "27",
+        "27.5",
+        "30",
+        "32",
+        "32.4",
+        "35",
+        "37",
+        "37.8",
+        "38",
+        "39.1",
+        "40",
+        "45",
+        "58.5",
+        "65" ;
+    foo:Tree_height_m "12",
+        "15",
+        "16",
+        "17",
+        "18",
+        "22",
+        "30",
+        "NA" ;
+    foo:Tree_individual_no "570",
+        "591",
+        "597",
+        "606",
+        "615",
+        "619",
+        "630",
+        "633",
+        "655",
+        "661",
+        "674",
+        "678",
+        "692",
+        "694",
+        "698",
+        "709",
+        "712",
+        "719",
+        "722",
+        "728",
+        "729",
+        "736",
+        "738",
+        "741",
+        "745",
+        "754",
+        "780",
+        "782",
+        "793",
+        "795",
+        "800",
+        "803",
+        "808",
+        "814",
+        "815",
+        "818",
+        "819",
+        "820" ;
+    foo:Tree_notes "",
+        "Multiple stems" .
+
+foo:Replanting_nearest_OP a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Year of any replanting of oil palm adjacent to the forest site (fragmented sites where adjacent oil palm had undergone a second round of planting)" ;
+    foo:hasReplanting_nearest_OP "2008" .
+
+foo:Ribubonus a sosa:Observation ;
+    foo:Date "25/09/2017" ;
+    foo:Liana_dbh_cm "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "3",
+        "3.2",
+        "3.3",
+        "3.5",
+        "4",
+        "4.2",
+        "4.3",
+        "4.5",
+        "5",
+        "5.5",
+        "5.7",
+        "6",
+        "6.2" ;
+    foo:Plot_no "1",
+        "2" ;
+    foo:Site_plot_code "F9P1",
+        "F9P2" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Callicarpa",
+        "Clausena excavate",
+        "Croton argyratus",
+        "Eusideroxylon zwageri",
+        "Ficus",
+        "Fordia",
+        "Glochidion",
+        "Hopea sangal",
+        "Macaranga",
+        "Macaranga pearsonii",
+        "Mallotus wrayi",
+        "Melicope",
+        "Nauclea",
+        "Paranephelium",
+        "Rinorea anguifera",
+        "Ryparosa acuminata",
+        "Syzygium" ;
+    foo:Tree_N_lianas "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7" ;
+    foo:Tree_dbh_cm "10",
+        "10.7",
+        "11.2",
+        "11.9",
+        "12",
+        "12.2",
+        "12.7",
+        "13",
+        "14.4",
+        "15",
+        "17",
+        "17.3",
+        "18",
+        "18.8",
+        "19.6",
+        "19.8",
+        "21.2",
+        "23.6",
+        "25",
+        "25.2",
+        "25.4",
+        "26.5",
+        "27.4",
+        "29",
+        "32.5",
+        "34.1",
+        "34.4",
+        "35.5",
+        "36",
+        "38",
+        "43.2",
+        "50",
+        "53",
+        "70" ;
+    foo:Tree_height_m "10",
+        "12",
+        "13",
+        "15",
+        "20",
+        "9",
+        "NA" ;
+    foo:Tree_individual_no "1636",
+        "1652",
+        "1657",
+        "1658",
+        "1663",
+        "1664",
+        "1666",
+        "1667",
+        "1668",
+        "1669",
+        "1670",
+        "1672",
+        "1675",
+        "1676",
+        "1677",
+        "1678",
+        "1679",
+        "1680",
+        "1681",
+        "1684",
+        "1686",
+        "1688",
+        "1693",
+        "1696",
+        "1704",
+        "1708",
+        "1709",
+        "1714",
+        "1717",
+        "1719",
+        "1720",
+        "1721",
+        "1722",
+        "1723",
+        "1724",
+        "1727",
+        "1729",
+        "1731",
+        "1734",
+        "1735",
+        "1736",
+        "1737" ;
+    foo:Tree_notes "",
+        "Amat took picture for ID to species",
+        "Based on S13",
+        "Based on S14",
+        "Has a hollow so not commercially valuable",
+        "Multiple stems",
+        "Multiple stems. Based on S13" .
+
+foo:Sabahmas59ha a sosa:Observation ;
+    foo:Date "08/02/2017",
+        "08/03/2017",
+        "08/04/2017" ;
+    foo:Liana_dbh_cm "10",
+        "2",
+        "2.2",
+        "2.4",
+        "2.5",
+        "2.8",
+        "3",
+        "3.2",
+        "3.3",
+        "3.5",
+        "3.7",
+        "4",
+        "4.2",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "5",
+        "5.4",
+        "6",
+        "6.2",
+        "6.7",
+        "7",
+        "8",
+        "9.2" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F3P1",
+        "F3P2",
+        "F3P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Aglaia",
+        "Baccaurea",
+        "Dipterocarpus",
+        "Ficus",
+        "Macaranga",
+        "Melicope" ;
+    foo:Tree_N_lianas "1",
+        "10",
+        "16",
+        "2",
+        "3",
+        "4",
+        "5",
+        "9" ;
+    foo:Tree_dbh_cm "11.5",
+        "13.4",
+        "14.2",
+        "15.5",
+        "17",
+        "18",
+        "20",
+        "21.2",
+        "22.2",
+        "22.8",
+        "25",
+        "26",
+        "28",
+        "28.2",
+        "28.4",
+        "31",
+        "32",
+        "33",
+        "36.7",
+        "40",
+        "55" ;
+    foo:Tree_height_m "12",
+        "14",
+        "15",
+        "18",
+        "20",
+        "7",
+        "8",
+        "NA" ;
+    foo:Tree_individual_no "315",
+        "316",
+        "357",
+        "359",
+        "361",
+        "383",
+        "385",
+        "387",
+        "395",
+        "407",
+        "408",
+        "409",
+        "411",
+        "442",
+        "451",
+        "453",
+        "458",
+        "460",
+        "461",
+        "463",
+        "465",
+        "474",
+        "476" ;
+    foo:Tree_notes "",
+        "Multiple stems",
+        "leaning" .
+
+foo:Sabahmas89ha a sosa:Observation ;
+    foo:Date "29/07/2017",
+        "31/07/2017" ;
+    foo:Liana_dbh_cm "10.5",
+        "11",
+        "11.7",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "5",
+        "5.1",
+        "5.5",
+        "5.6",
+        "5.8",
+        "6",
+        "6.2",
+        "6.3",
+        "7.5",
+        "8",
+        "8.4",
+        "8.9",
+        "9.2" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F2P1",
+        "F2P2",
+        "F2P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Barringtonia lanceolata",
+        "Canarium denticulatum",
+        "Dendrocnide",
+        "Diospyros",
+        "Ficus",
+        "Ficus+Diospyros",
+        "Hydnocarpus anomala",
+        "Lithocarpus",
+        "Litsea",
+        "Microcos",
+        "Paranephelium xestophyllum",
+        "Polyalthia",
+        "Pterospermum",
+        "Pterospermum stapfianum",
+        "Ptychopyxis arborea",
+        "Sloanea javanica" ;
+    foo:Tree_N_lianas "1",
+        "11",
+        "13",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8" ;
+    foo:Tree_dbh_cm "10.2",
+        "10.3",
+        "10.5",
+        "10.8",
+        "12.2",
+        "12.5",
+        "12.7",
+        "12.9",
+        "13",
+        "13.7",
+        "14",
+        "14.1",
+        "14.2",
+        "14.5",
+        "14.7",
+        "15.2",
+        "15.4",
+        "15.5",
+        "15.7",
+        "16.2",
+        "16.4",
+        "17",
+        "17.3",
+        "17.8",
+        "18",
+        "18.3",
+        "18.6",
+        "19.2",
+        "20",
+        "20.5",
+        "21.8",
+        "23",
+        "24",
+        "25",
+        "26.7",
+        "28",
+        "28.8",
+        "31.6",
+        "33.1",
+        "37",
+        "40.8",
+        "43.3",
+        "46",
+        "49",
+        "60",
+        "71",
+        "75",
+        "80" ;
+    foo:Tree_height_m "15",
+        "16",
+        "17",
+        "25",
+        "3",
+        "33",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "NA" ;
+    foo:Tree_individual_no "132",
+        "133",
+        "134",
+        "143",
+        "144",
+        "145",
+        "146",
+        "147",
+        "148",
+        "149",
+        "150",
+        "151",
+        "152",
+        "156",
+        "157",
+        "158",
+        "159",
+        "160",
+        "161",
+        "162",
+        "163",
+        "164",
+        "169",
+        "170",
+        "171",
+        "172",
+        "173",
+        "176",
+        "179",
+        "180",
+        "181",
+        "182",
+        "190",
+        "191",
+        "192",
+        "195",
+        "196",
+        "197",
+        "198",
+        "201",
+        "203",
+        "213",
+        "221",
+        "222",
+        "224",
+        "225",
+        "227",
+        "230",
+        "233",
+        "236",
+        "238",
+        "239",
+        "240",
+        "242",
+        "244",
+        "245",
+        "249",
+        "251" ;
+    foo:Tree_notes "",
+        "Ficus completely surrounding Diospyros - dbh of both (see pic)",
+        "Multiple stems" .
+
+foo:SabahmasRainbowRidge a sosa:Observation ;
+    foo:Date "18/10/2017",
+        "19/10/2017" ;
+    foo:Liana_dbh_cm "10",
+        "10.2",
+        "10.6",
+        "11",
+        "12",
+        "12.8",
+        "13",
+        "13.5",
+        "14",
+        "15",
+        "16.5",
+        "17.3",
+        "17.8",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "20.2",
+        "20.5",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "4.9",
+        "5",
+        "5.2",
+        "5.3",
+        "5.5",
+        "5.6",
+        "5.8",
+        "5.9",
+        "6",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.7",
+        "6.8",
+        "7",
+        "7.2",
+        "7.4",
+        "7.7",
+        "7.8",
+        "8",
+        "9",
+        "9.2",
+        "9.4",
+        "9.5" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F16P1",
+        "F16P2",
+        "F16P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Actinodaphne",
+        "Aglaia",
+        "Archidendron",
+        "Artocarpus anisophyllus",
+        "Baccaurea",
+        "Brownlowia peltata",
+        "Callicarpa",
+        "Chisocheton",
+        "Chisocheton sarawakensis",
+        "Crudia",
+        "Crudia tenuipes",
+        "Dialium kunstleri",
+        "Dimocarpus longan",
+        "Diospyros",
+        "Dipterocarpus caudiferus",
+        "Dryobalanops lanceolata",
+        "Drypetes",
+        "Drypetes longifolia",
+        "Durio",
+        "Ficus",
+        "Garcinia",
+        "Glochidion glabrum",
+        "Heynea trijuga",
+        "Hopea ferruginea",
+        "Koilodepas longifolium",
+        "Macaranga pearsonii",
+        "Mallotus",
+        "Microcos",
+        "Myristica",
+        "Nauclea subdita",
+        "Neolamarckia cadamba",
+        "Neonauclea",
+        "Palaquium",
+        "Parartocarpus",
+        "Parashorea tomentella",
+        "Scaphium",
+        "Shorea",
+        "Shorea fallax",
+        "Shorea gibbosa",
+        "Shorea leptoderma",
+        "Teijsmanniodendron" ;
+    foo:Tree_N_lianas "1",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9" ;
+    foo:Tree_dbh_cm "10",
+        "10.5",
+        "11.2",
+        "11.8",
+        "12",
+        "12.2",
+        "12.4",
+        "12.7",
+        "13",
+        "13.2",
+        "13.3",
+        "14",
+        "14.2",
+        "15",
+        "15.2",
+        "15.5",
+        "15.7",
+        "16",
+        "16.5",
+        "17",
+        "17.7",
+        "18",
+        "18.3",
+        "19",
+        "20",
+        "20.4",
+        "20.9",
+        "21.5",
+        "22",
+        "23.3",
+        "24",
+        "25",
+        "26",
+        "28",
+        "30",
+        "32",
+        "32.2",
+        "33.8",
+        "35",
+        "37",
+        "38",
+        "42",
+        "43",
+        "45",
+        "50",
+        "55",
+        "60",
+        "75",
+        "80",
+        "90" ;
+    foo:Tree_height_m "10",
+        "11",
+        "12",
+        "13",
+        "15",
+        "16",
+        "18",
+        "20",
+        "23",
+        "25",
+        "28",
+        "30",
+        "35",
+        "38",
+        "45",
+        "NA" ;
+    foo:Tree_individual_no "3145",
+        "3154",
+        "3159",
+        "3164",
+        "3165",
+        "3167",
+        "3169",
+        "3171",
+        "3174",
+        "3175",
+        "3177",
+        "3180",
+        "3185",
+        "3186",
+        "3188",
+        "3190",
+        "3191",
+        "3192",
+        "3194",
+        "3196",
+        "3202",
+        "3203",
+        "3204",
+        "3205",
+        "3206",
+        "3208",
+        "3209",
+        "3210",
+        "3212",
+        "3213",
+        "3214",
+        "3216",
+        "3217",
+        "3225",
+        "3226",
+        "3227",
+        "3240",
+        "3241",
+        "3247",
+        "3248",
+        "3253",
+        "3257",
+        "3266",
+        "3268",
+        "3269",
+        "3272",
+        "3279",
+        "3282",
+        "3289",
+        "3290",
+        "3292",
+        "3300",
+        "3305",
+        "3309",
+        "3313",
+        "3315",
+        "3319",
+        "3320",
+        "3321",
+        "3322",
+        "3323",
+        "3324",
+        "3326",
+        "3328",
+        "3330",
+        "3332",
+        "3334",
+        "3336",
+        "3337",
+        "3338",
+        "3340",
+        "3342",
+        "3343",
+        "3344",
+        "3345",
+        "3346",
+        "3347",
+        "3349",
+        "3351",
+        "3352",
+        "3353",
+        "3355",
+        "3356",
+        "3357",
+        "3358",
+        "3360",
+        "3361",
+        "3363",
+        "3364",
+        "3366",
+        "3368" ;
+    foo:Tree_notes "",
+        "Based on S15b",
+        "Multiple stems" .
+
+foo:Sabahmassmallsteep a sosa:Observation ;
+    foo:Date "17/10/2017" ;
+    foo:Liana_dbh_cm "10.5",
+        "2",
+        "2.2",
+        "2.3",
+        "2.5",
+        "2.7",
+        "2.8",
+        "3",
+        "3.2",
+        "3.3",
+        "3.5",
+        "3.6",
+        "3.8",
+        "4",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.8",
+        "5",
+        "5.5",
+        "5.8",
+        "6",
+        "6.3",
+        "6.5",
+        "6.8",
+        "7",
+        "7.1",
+        "7.5",
+        "8",
+        "8.5",
+        "9" ;
+    foo:Plot_no "1",
+        "2" ;
+    foo:Site_plot_code "F15P1",
+        "F15P2" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Alstonia",
+        "Brownlowia",
+        "Diospyros",
+        "Ficus",
+        "Rinorea bengalensis" ;
+    foo:Tree_N_lianas "1",
+        "10",
+        "11",
+        "2",
+        "3",
+        "31",
+        "4",
+        "5",
+        "6",
+        "7" ;
+    foo:Tree_dbh_cm "11",
+        "11.5",
+        "13.5",
+        "16.4",
+        "17",
+        "18",
+        "18.3",
+        "20.5",
+        "21.5",
+        "22",
+        "22.5",
+        "24",
+        "24.5",
+        "25",
+        "25.5",
+        "26.3",
+        "27",
+        "27.5",
+        "30",
+        "31",
+        "32",
+        "32.5",
+        "33",
+        "34.5",
+        "35",
+        "36",
+        "38" ;
+    foo:Tree_height_m "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "9",
+        "NA" ;
+    foo:Tree_individual_no "3011",
+        "3012",
+        "3015",
+        "3016",
+        "3020",
+        "3022",
+        "3023",
+        "3024",
+        "3027",
+        "3028",
+        "3029",
+        "3030",
+        "3031",
+        "3034",
+        "3041",
+        "3046",
+        "3056",
+        "3058",
+        "3059",
+        "3061",
+        "3086",
+        "3087",
+        "3093",
+        "3094",
+        "3095",
+        "3097",
+        "3099",
+        "3100",
+        "3102",
+        "3115",
+        "3119",
+        "3121",
+        "3132",
+        "3136" ;
+    foo:Tree_notes "",
+        "Multiple stems" .
+
+foo:SapiSugutKoperasi a sosa:Observation ;
+    foo:Date "10/05/2017",
+        "10/06/2017" ;
+    foo:Liana_dbh_cm "11.8",
+        "11.9",
+        "14.8",
+        "2",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.8",
+        "4.9",
+        "5",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.6",
+        "5.8",
+        "6.1",
+        "6.2",
+        "6.4",
+        "6.5",
+        "7",
+        "7.2",
+        "7.4",
+        "7.5",
+        "7.6",
+        "7.7",
+        "8.3",
+        "8.6",
+        "8.8",
+        "8.9",
+        "9.1" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F12P1",
+        "F12P2",
+        "F12P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Archidendron",
+        "Artocarpus",
+        "Calophyllum",
+        "Chisocheton",
+        "Croton",
+        "Dehaasia",
+        "Dialium kunstleri",
+        "Diospyros",
+        "Dryobalanops lanceolata",
+        "Drypetes",
+        "Ficus",
+        "Glochidion",
+        "Helicia",
+        "Hopea",
+        "Hopea nervosa",
+        "Lithocarpus",
+        "Macaranga gigantea",
+        "Macaranga pearsonii",
+        "Microcos",
+        "Monoon",
+        "Myristica",
+        "Neesia",
+        "Neonauclea",
+        "Pternandra",
+        "Shorea",
+        "Shorea macroptera",
+        "Syzygium",
+        "Tabernaemontana",
+        "Teijsmanniodendron",
+        "Vatica" ;
+    foo:Tree_N_lianas "1",
+        "11",
+        "15",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7" ;
+    foo:Tree_dbh_cm "10.2",
+        "10.5",
+        "11.1",
+        "11.2",
+        "12",
+        "12.1",
+        "12.2",
+        "13.1",
+        "13.9",
+        "14.1",
+        "14.2",
+        "14.3",
+        "15.8",
+        "17.2",
+        "17.9",
+        "18.9",
+        "19",
+        "20.3",
+        "20.9",
+        "22",
+        "22.2",
+        "23.4",
+        "24",
+        "24.9",
+        "26",
+        "27",
+        "28.1",
+        "29.1",
+        "30.4",
+        "32",
+        "32.8",
+        "33",
+        "34",
+        "35",
+        "36",
+        "38",
+        "39",
+        "40",
+        "40.2",
+        "40.9",
+        "41",
+        "42",
+        "46",
+        "47",
+        "48" ;
+    foo:Tree_height_m "10",
+        "12",
+        "14",
+        "15",
+        "16",
+        "18",
+        "20",
+        "25",
+        "30",
+        "35",
+        "8",
+        "NA" ;
+    foo:Tree_individual_no "2287",
+        "2290",
+        "2300",
+        "2303",
+        "2304",
+        "2308",
+        "2309",
+        "2312",
+        "2314",
+        "2316",
+        "2317",
+        "2320",
+        "2323",
+        "2327",
+        "2329",
+        "2330",
+        "2331",
+        "2334",
+        "2339",
+        "2342",
+        "2348",
+        "2356",
+        "2357",
+        "2359",
+        "2394",
+        "2398",
+        "2403",
+        "2407",
+        "2409",
+        "2412",
+        "2413",
+        "2422",
+        "2423",
+        "2425",
+        "2426",
+        "2428",
+        "2429",
+        "2433",
+        "2436",
+        "2437",
+        "2445",
+        "2447",
+        "2452",
+        "2488",
+        "2496",
+        "2498",
+        "2503",
+        "2508",
+        "2511" ;
+    foo:Tree_notes "",
+        "Multiple stems" .
+
+foo:SekarImej600ha a sosa:Observation ;
+    foo:Date "28/09/2017",
+        "30/09/2017" ;
+    foo:Liana_dbh_cm "10.5",
+        "12",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.9",
+        "21.8",
+        "3",
+        "3.1",
+        "3.2",
+        "3.5",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.8",
+        "4.9",
+        "5",
+        "5.1",
+        "5.3",
+        "5.4",
+        "5.7",
+        "5.8",
+        "6",
+        "6.2",
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.9",
+        "7",
+        "7.1",
+        "7.9",
+        "8",
+        "8.2",
+        "8.3",
+        "8.9",
+        "9.5" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F10P1",
+        "F10P2",
+        "F10P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Archidendron ellipticum",
+        "Artocarpus",
+        "Calophyllum",
+        "Cinnamomum",
+        "Diospyros",
+        "Dryobalanops beccarii",
+        "Dryobalanops keithii",
+        "Dryobalanops lanceolata",
+        "Drypetes",
+        "Durio",
+        "Dysoxylum",
+        "Gironniera",
+        "Glochidion",
+        "Hopea",
+        "Hydnocarpus",
+        "Lithocarpus",
+        "Lophopetalum",
+        "Macaranga pearsonii",
+        "Mallotus",
+        "Moultonianthus leembruggianus",
+        "Palaquium",
+        "Paraserianthes falcataria",
+        "Scaphium",
+        "Shorea",
+        "Shorea fallax",
+        "Syzygium" ;
+    foo:Tree_N_lianas "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "8" ;
+    foo:Tree_dbh_cm "10.6",
+        "13",
+        "13.7",
+        "15",
+        "15.5",
+        "16.9",
+        "17.9",
+        "18",
+        "20",
+        "20.1",
+        "20.3",
+        "20.4",
+        "21.4",
+        "22",
+        "24",
+        "25.2",
+        "25.3",
+        "25.4",
+        "25.6",
+        "26.2",
+        "27",
+        "27.7",
+        "29",
+        "29.1",
+        "29.9",
+        "30.4",
+        "30.9",
+        "31.5",
+        "32.6",
+        "36",
+        "37",
+        "38",
+        "39.7",
+        "40",
+        "40.1",
+        "40.5",
+        "42",
+        "60" ;
+    foo:Tree_height_m "10",
+        "12",
+        "13",
+        "15",
+        "20",
+        "22",
+        "23",
+        "25",
+        "27",
+        "33",
+        "35",
+        "NA" ;
+    foo:Tree_individual_no "1743",
+        "1754",
+        "1755",
+        "1756",
+        "1758",
+        "1760",
+        "1761",
+        "1762",
+        "1763",
+        "1770",
+        "1772",
+        "1773",
+        "1776",
+        "1777",
+        "1778",
+        "1779",
+        "1783",
+        "1788",
+        "1791",
+        "1803",
+        "1820",
+        "1823",
+        "1829",
+        "1832",
+        "1835",
+        "1854",
+        "1855",
+        "1858",
+        "1860",
+        "1868",
+        "1872",
+        "1873",
+        "1880",
+        "1888",
+        "1889",
+        "1892",
+        "1925",
+        "1949",
+        "1964",
+        "1969",
+        "1986",
+        "1994",
+        "1998",
+        "2000",
+        "2014" ;
+    foo:Tree_notes "" .
+
+foo:SekarImejParcel5 a sosa:Observation ;
+    foo:Date "10/02/2017",
+        "10/03/2017",
+        "29/09/2017" ;
+    foo:Liana_dbh_cm "10",
+        "12",
+        "18.4",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "4.9",
+        "5",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.9",
+        "6",
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.7",
+        "6.8",
+        "7.2",
+        "7.4",
+        "7.5",
+        "7.9",
+        "8",
+        "8.4",
+        "8.6",
+        "8.8",
+        "8.9",
+        "9.9" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F11P1",
+        "F11P2",
+        "F11P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Actinodaphne",
+        "Aglaia",
+        "Alstonia",
+        "Aporosa",
+        "Artocarpus",
+        "Barringtonia",
+        "Barringtonia lanceolata",
+        "Callicarpa",
+        "Canarium",
+        "Chisocheton",
+        "Cinnamomum",
+        "Croton argyratus",
+        "Dehaasia",
+        "Diospyros",
+        "Dipterocarpus",
+        "Dryobalanops",
+        "Dryobalanops keithii",
+        "Dryobalanops lanceolata",
+        "Durio",
+        "Dysoxylum",
+        "Ficus",
+        "Gironniera",
+        "Glochidion",
+        "Hopea",
+        "Hydnocarpus",
+        "Lindera",
+        "Lithocarpus",
+        "Litsea",
+        "Lophopetalum",
+        "Macaranga gigantea",
+        "Magnolia",
+        "Melicope",
+        "Myristica",
+        "Palaquium",
+        "Paranephelium",
+        "Pternandra",
+        "Scorodocarpus borneensis",
+        "Shorea",
+        "Shorea acuminatissima",
+        "Shorea leprosula",
+        "Shorea parvifolia",
+        "Syzygium",
+        "Terminalia" ;
+    foo:Tree_N_lianas "1",
+        "10",
+        "16",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9" ;
+    foo:Tree_dbh_cm "10.6",
+        "10.7",
+        "11",
+        "11.3",
+        "11.4",
+        "12.2",
+        "12.3",
+        "13.4",
+        "14.1",
+        "14.4",
+        "14.5",
+        "14.7",
+        "14.9",
+        "15.6",
+        "15.9",
+        "16.2",
+        "16.4",
+        "16.5",
+        "16.6",
+        "16.7",
+        "16.8",
+        "17.8",
+        "17.9",
+        "18.8",
+        "19.4",
+        "20.1",
+        "20.6",
+        "21",
+        "21.6",
+        "22.2",
+        "22.6",
+        "23.1",
+        "23.3",
+        "23.9",
+        "24.1",
+        "24.2",
+        "24.3",
+        "24.6",
+        "25.1",
+        "26.6",
+        "26.8",
+        "27.1",
+        "27.5",
+        "29.9",
+        "30.1",
+        "30.4",
+        "30.8",
+        "31.5",
+        "32.3",
+        "33",
+        "33.3",
+        "34.6",
+        "35.4",
+        "36.5",
+        "36.6",
+        "40",
+        "40.1",
+        "40.4",
+        "40.7",
+        "40.9",
+        "42.4",
+        "50",
+        "56",
+        "57",
+        "65",
+        "70" ;
+    foo:Tree_height_m "10",
+        "13",
+        "14",
+        "15",
+        "18",
+        "20",
+        "22",
+        "25",
+        "30",
+        "35",
+        "8",
+        "NA" ;
+    foo:Tree_individual_no "2025",
+        "2032",
+        "2035",
+        "2036",
+        "2042",
+        "2044",
+        "2045",
+        "2048",
+        "2049",
+        "2053",
+        "2068",
+        "2070",
+        "2078",
+        "2080",
+        "2082",
+        "2087",
+        "2088",
+        "2101",
+        "2117",
+        "2119",
+        "2127",
+        "2131",
+        "2132",
+        "2134",
+        "2136",
+        "2137",
+        "2140",
+        "2141",
+        "2150",
+        "2151",
+        "2152",
+        "2153",
+        "2156",
+        "2162",
+        "2165",
+        "2167",
+        "2168",
+        "2173",
+        "2176",
+        "2179",
+        "2182",
+        "2186",
+        "2190",
+        "2199",
+        "2201",
+        "2209",
+        "2210",
+        "2212",
+        "2215",
+        "2218",
+        "2219",
+        "2220",
+        "2225",
+        "2232",
+        "2233",
+        "2235",
+        "2241",
+        "2242",
+        "2244",
+        "2245",
+        "2247",
+        "2248",
+        "2249",
+        "2252",
+        "2253",
+        "2254",
+        "2255",
+        "2256",
+        "2258",
+        "2260",
+        "2267",
+        "2268",
+        "2270" ;
+    foo:Tree_notes "",
+        "Based on S13",
+        "Multiple stems" .
+
+foo:Silt a owl:NamedIndividual .
+
+foo:Site_code a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "code for the study site, in the format Fa (where a can be 1-18)" ;
+    sosa:hasSimpleResult 18 .
+
+foo:Site_name a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "name of the study site" ;
+    foo:hasSite_name "Sabahmas" .
+
+foo:Site_plot_code a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "code for the study site and plot at the site, in the format FaPb (where a refers to site code, and can be 1-18; and b refers to plot code, and can be 1-3)" ;
+    foo:hasSite_plot_code 3 .
+
+foo:Soil_Sensor a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment """Soil sensor data consist of soil properties tropical forests in Sabah, Malaysia. \r
+The data is a contribution from the BALI collaboration, which is financed by the UK's Natural Environment Research Council (NERC).""" ;
+    sosa:hasFeatureOfInterest foo:Soil ;
+    sosa:observedProperty foo:Bulk_Density,
+        ns2:N,
+        ns2:P,
+        foo:Horizon,
+        foo:Horizon_Depth,
+        foo:Land_Use,
+        foo:Plot_Name,
+        foo:Site,
+        foo:Soil_Moisture,
+        foo:Soil_pH,
+        foo:Subplot,
+        foo:inorganic_P,
+        foo:total_C,
+        foo:total_N .
+
+foo:Soil_identifier a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Unique observation identifier, collected over a set time interval." ;
+    sosa:hasResult "\" \"" .
+
+foo:Source_of_dates a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string ;
+    skos:definition "source of \"First_planting_nearest_OP\"" ;
+    foo:Source_of_dates "string" .
+
+foo:SriKamusan10ha a sosa:Observation ;
+    foo:Date "10/09/2017",
+        "10/11/2017" ;
+    foo:Liana_dbh_cm "10",
+        "12",
+        "2",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.7",
+        "2.8",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "4",
+        "4.1",
+        "4.2",
+        "4.4",
+        "4.5",
+        "4.8",
+        "5",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "6",
+        "6.5",
+        "7",
+        "8",
+        "9" ;
+    foo:Plot_no "1",
+        "2" ;
+    foo:Site_plot_code "F13P1",
+        "F13P2" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Alstonia",
+        "Anisophyllea corneri",
+        "Archidendron",
+        "Barringtonia",
+        "Crateva",
+        "Croton",
+        "Crudia tenuipes",
+        "Dehaasia",
+        "Diospyros",
+        "Dryobalanops beccarii",
+        "Dryobalanops lanceolata",
+        "Drypetes",
+        "Gironniera",
+        "Hopea",
+        "Hydnocarpus",
+        "Knema hirtella",
+        "Macaranga pearsonii",
+        "Madhuca",
+        "Microcos",
+        "Palaquium",
+        "Prunus javanica",
+        "Psydrax",
+        "Santiria",
+        "Scorodocarpus borneensis",
+        "Semecarpus glaucas",
+        "Shorea",
+        "Shorea parvifolia" ;
+    foo:Tree_N_lianas "1",
+        "17",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "9" ;
+    foo:Tree_dbh_cm "10",
+        "10.5",
+        "11",
+        "11.2",
+        "11.7",
+        "12",
+        "12.7",
+        "14.1",
+        "14.2",
+        "15",
+        "15.6",
+        "15.7",
+        "18",
+        "20.2",
+        "20.5",
+        "22.2",
+        "23.5",
+        "24.5",
+        "24.8",
+        "25",
+        "25.6",
+        "26",
+        "28",
+        "28.4",
+        "30",
+        "33",
+        "34",
+        "38",
+        "40",
+        "42",
+        "45",
+        "46.8",
+        "47",
+        "50",
+        "55",
+        "56",
+        "57",
+        "60",
+        "65" ;
+    foo:Tree_height_m "10",
+        "12",
+        "13",
+        "16",
+        "18",
+        "20",
+        "30",
+        "35",
+        "NA" ;
+    foo:Tree_individual_no "2536",
+        "2557",
+        "2562",
+        "2563",
+        "2564",
+        "2566",
+        "2568",
+        "2574",
+        "2578",
+        "2579",
+        "2589",
+        "2590",
+        "2593",
+        "2594",
+        "2599",
+        "2601",
+        "2602",
+        "2608",
+        "2612",
+        "2614",
+        "2720",
+        "2723",
+        "2724",
+        "2750",
+        "2753",
+        "2760",
+        "2761",
+        "2775",
+        "2780",
+        "2783",
+        "2786",
+        "2787",
+        "2788",
+        "2789",
+        "2790",
+        "2794",
+        "2797",
+        "2798",
+        "2803",
+        "2806",
+        "2807",
+        "2810",
+        "2815",
+        "2820",
+        "2824" ;
+    foo:Tree_notes "",
+        "Multiple stems" .
+
+foo:SriKamusan525ha a sosa:Observation ;
+    foo:Date "10/10/2017",
+        "10/12/2017",
+        "13/10/2017" ;
+    foo:Liana_dbh_cm "10.4",
+        "2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "3",
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.2",
+        "4.3",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "5",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.5",
+        "6",
+        "6.7",
+        "6.8",
+        "7",
+        "8" ;
+    foo:Plot_no "1",
+        "2",
+        "3" ;
+    foo:Site_plot_code "F14P1",
+        "F14P2",
+        "F14P3" ;
+    foo:Subplot_radius_m "20",
+        "30" ;
+    foo:Tree_ID "Aglaia",
+        "Alstonia",
+        "Archidendron",
+        "Archidendron clypearia",
+        "Artocarpus",
+        "Artocarpus anisophyllus",
+        "Barringtonia",
+        "Callicarpa",
+        "Calophyllum",
+        "Canarium",
+        "Chisocheton",
+        "Cinnamomum",
+        "Croton",
+        "Elaeocarpus",
+        "Elateriospermum tapos",
+        "Harpullia arborea",
+        "Hopea",
+        "Knema",
+        "Lithocarpus",
+        "Macaranga conifera",
+        "Macaranga pearsonii",
+        "Melicope",
+        "Ochanostachys amentacea",
+        "Paranephelium",
+        "Parartocarpus",
+        "Parkia speciosa",
+        "Prunus javanica",
+        "Santiria",
+        "Scaphium",
+        "Scleropyrum",
+        "Semecarpus glaucas",
+        "Shorea",
+        "Shorea agamii",
+        "Shorea fallax",
+        "Shorea macroptera",
+        "Teijsmanniodendron",
+        "Tristaniopsis" ;
+    foo:Tree_N_lianas "1",
+        "10",
+        "12",
+        "15",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7" ;
+    foo:Tree_dbh_cm "10",
+        "10.2",
+        "10.5",
+        "10.8",
+        "11",
+        "11.1",
+        "11.3",
+        "11.5",
+        "11.8",
+        "11.9",
+        "12",
+        "12.2",
+        "12.4",
+        "12.5",
+        "12.8",
+        "13",
+        "13.2",
+        "13.5",
+        "13.6",
+        "13.7",
+        "14",
+        "14.1",
+        "14.2",
+        "14.4",
+        "14.5",
+        "15",
+        "15.4",
+        "15.5",
+        "16",
+        "16.5",
+        "16.7",
+        "17",
+        "17.2",
+        "18",
+        "18.5",
+        "19",
+        "19.5",
+        "19.6",
+        "19.8",
+        "20",
+        "20.5",
+        "20.7",
+        "21.7",
+        "21.9",
+        "22",
+        "23.6",
+        "23.9",
+        "24",
+        "25",
+        "25.2",
+        "25.4",
+        "25.7",
+        "26.7",
+        "27",
+        "28",
+        "30",
+        "32.3",
+        "32.5",
+        "33.6",
+        "38",
+        "50" ;
+    foo:Tree_height_m "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "16",
+        "18",
+        "20",
+        "22",
+        "8",
+        "9",
+        "NA" ;
+    foo:Tree_individual_no "2621",
+        "2622",
+        "2628",
+        "2634",
+        "2635",
+        "2636",
+        "2641",
+        "2647",
+        "2648",
+        "2660",
+        "2661",
+        "2663",
+        "2666",
+        "2669",
+        "2670",
+        "2673",
+        "2674",
+        "2675",
+        "2692",
+        "2698",
+        "2701",
+        "2703",
+        "2707",
+        "2710",
+        "2712",
+        "2716",
+        "2852",
+        "2853",
+        "2855",
+        "2858",
+        "2860",
+        "2862",
+        "2865",
+        "2868",
+        "2875",
+        "2877",
+        "2878",
+        "2879",
+        "2883",
+        "2884",
+        "2885",
+        "2890",
+        "2903",
+        "2905",
+        "2906",
+        "2907",
+        "2913",
+        "2918",
+        "2919",
+        "2922",
+        "2928",
+        "2929",
+        "2930",
+        "2937",
+        "2943",
+        "2953",
+        "2954",
+        "2956",
+        "2957",
+        "2959",
+        "2960",
+        "2961",
+        "2962",
+        "2967",
+        "2968",
+        "2969",
+        "2972",
+        "2973",
+        "2977",
+        "2979",
+        "2980",
+        "2987",
+        "2992",
+        "2993",
+        "2994",
+        "2995",
+        "2996" ;
+    foo:Tree_notes "",
+        "Based on S19",
+        "Based on S7",
+        "Multiple stems",
+        "Multiple stems. Based on S7",
+        "Sample IDed by Mike and Postar. S18. Spiny trunk",
+        "Sample IDed by Mike. S19. White sap" .
+
+foo:Survey_date a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "date of field data collection at the plot, in the plot, in the format dd/mm/yyyy. Note that in some cases measurements were taken on more than one date for a single plot; see the dates provided in the seperate vegetation datasets for the precise date of particular vegetation data collection." ;
+    foo:hasLocalDate "" .
+
+foo:Vegetation a owl:NamedIndividual,
+        sosa:FeatureOfInterest .
+
+foo:Years_since_frag a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Years since fragmentation at time of data collection. i.e., 2017 \"First_planting_nearest_OP\" (fragmented sites only)" ;
+    foo:hasYears_since_frag "2017" .
+
+<https://w3id.org/def/foo#elephant#ABAW> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called  Abaw, here, the GPS collar (sensor) is named after her." ;
+    sosa:hasResult "" ;
+    sosa:observedProperty foo:Cov,
+        foo:ExtTemp,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Aqeela> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "",
+        "A female asian elephant called  Aqeela, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:HDOP,
+        foo:LocalDate,
+        foo:LocalTime,
+        foo:PDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Bikang1> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Bikang1, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Bikang2> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Bikang2, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Dara> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Dara, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Guli> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A male asian elephant called Guli, here, the GPS collar (sensor) is named after him." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Ita> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Ita, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Jasmin> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Jasmin, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Jasper> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A male asian elephant called Jasper here, the GPS collar (sensor) is named after him." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Kasih> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Kasih, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Kuma> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A male asian elephant called Kuma, here, the GPS collar (sensor) is named after him." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Liun> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Liun, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:DateTime,
+        foo:Direction,
+        foo:PDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Maliau> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A male asian elephant called Maliau, here, the GPS collar (sensor) is named after him." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Merotai> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A male asian elephant called Merotai, here, the GPS collar (sensor) is named after him." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Puteri> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Puteri here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Putut> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Putut, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Sandi> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Sandi, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Sejati> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A male asian elephant called Sejati, here, the GPS collar (sensor) is named after him." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Seri> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Seri, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Tulid> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Tulid, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Tunglap> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A female asian elephant called Tunglap, here, the GPS collar (sensor) is named after her." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#elephant#Umas2> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A male asian elephant called Umas2, here, the GPS collar (sensor) is named after him." ;
+    sosa:observedProperty foo:Count,
+        foo:Cov,
+        foo:Direction,
+        foo:Distance,
+        foo:ExtTemp,
+        foo:GMTDate,
+        foo:GMTTime,
+        foo:HDOP,
+        foo:Speed,
+        foo:Temperature .
+
+<https://w3id.org/def/foo#hasC:N> a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasClay a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasCount a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:integer .
+
+foo:hasCov a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:integer .
+
+foo:hasDirection a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasDistance a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasDisturbance a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasElevation_masi a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasFirst_planning_nearest_OP a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasHDOP a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:integer .
+
+foo:hasHorizon a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasInorganic_P a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasLand_Use a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasLiana_dbh_cm a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasLocalDate a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasMake a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasModel a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasMoisture a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasName a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasPath a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+foo:hasPlot_Name a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasReplanting_nearest_OP a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasSand a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasSilt a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasSite_name a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasSite_plot_code a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range rdfs:Literal .
+
+foo:hasSoil_pH a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasSpeed a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasSubplot a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range rdfs:Literal .
+
+foo:hasSubplot_radius_m a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasTemp a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:double .
+
+foo:hasTemperature a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:double .
+
+foo:hasTotal_C a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasTotal_N a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasTotal_P a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasTree_ID a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasTree_dbh_cm a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasTree_height_m a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:hasTree_individual_no a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:integer .
+
+foo:hasTree_notes a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+foo:hasYears_since_frag a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/def/foo#python#Juling> a owl:NamedIndividual,
+        sosa:Sensor ;
+    rdfs:comment "A python (snake) called Juling- with tracking device called Juling" ;
+    owl:sameAs foo:python ;
+    sosa:hasFeatureOfInterest foo:python ;
+    sosa:observedProperty foo:DateTime,
+        foo:HDOP,
+        foo:Speed .
+
+foo:timestamp a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "The time of the sensor observation." ;
+    sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Mammalia> a owl:Class ;
+    rdfs:comment """The highest class of the subphylum Vertebrata comprising humans and all other animals that nourish their young with milk secreted by mammary glands.\r
+https://www.merriam-webster.com/dictionary/Elephantidae""" ;
+    rdfs:subClassOf wo:Class .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Elephantidae> a owl:Class ;
+    rdfs:comment """ELEPHANTIDAE is a family of bulky mammals (order Proboscidea) comprising the recent elephants and related extinct forms.\r
+Source: https://www.merriam-webster.com/dictionary/Elephantidae""" ;
+    rdfs:subClassOf wo:Family .
+
+wo:FreshwaterHabitat a owl:Class ;
+    rdfs:label "Freshwater Habitat"@en-gb ;
+    metadata:prefixIRI "wo:FreshwaterHabitat" ;
+    rdfs:comment "Freshwater habitats include bogs, ponds, lakes, rivers and streams. About 3% of Earth's water is freshwater, but this includes the water locked up in the ice caps and trapped in rocks and soil as groundwater. Only a tiny fraction (0.014%) is surface water in the form of rivers, lakes and swamps." ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:subClassOf wo:Habitat ;
+    ns:term_status "testing" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom/Animalia> a owl:Class ;
+    rdfs:comment """Animalia is the scientific grouping that includes all animals. Scientists, historians, and others classify similar things together, using a taxonomy.\r
+\r
+All members of the kingdom Animalia share three key traits. They are multicellular organisms, and they are all eukaryotic, meaning their cells have membrane-enclosed organelles and a nucleus. All animals are heterotrophic and must feed on other organisms to survive.\r
+source:https://study.com/learn/lesson/animalia-kingdom-examples-characteristics-facts.html""" ;
+    rdfs:subClassOf wo:Kingdom .
+
+wo:MarineHabitat a owl:Class ;
+    rdfs:label "Marine Habitat"@en-gb ;
+    metadata:prefixIRI "wo:MarineHabitat" ;
+    rdfs:comment "Approximately 71% of the Earth's surface is covered by the oceans, an area of some 223698816km/sq. Although marine life evolved around three billion years before life on land, marine habitats are relatively poorly studied and much of the ocean's depths remains unexplored." ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:subClassOf wo:Habitat ;
+    ns:term_status "testing" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Proboscidea> a owl:Class ;
+    rdfs:comment """Any of an order (Proboscidea) of large mammals comprising the elephants and extinct related forms.\r
+https://www.merriam-webster.com/dictionary/proboscidean""" ;
+    rdfs:subClassOf wo:Order .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Civettictis> a owl:Class ;
+    rdfs:subClassOf wo:TaxonName .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Loxodonta> a owl:Class ;
+    rdfs:subClassOf wo:TaxonName .
+
+wo:TerrestrialHabitat a owl:Class ;
+    rdfs:label "Terrestrial Habitat"@en-gb ;
+    metadata:prefixIRI "wo:TerrestrialHabitat" ;
+    rdfs:comment "Terrestrial habitats include forests, grasslands, deserts and rainforests. They are typically defined by factors such as plant structure (trees and grasses), leaf types (eg broadleaf and needleleaf), plant spacing (forest, woodland, savanna) and climate." ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:subClassOf wo:Habitat ;
+    ns:term_status "testing" .
+
+wo:class a owl:ObjectProperty ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:range wo:Class .
+
+wo:family a owl:ObjectProperty ;
+    rdfs:label "family"@en-gb ;
+    rdfs:comment "associates a taxon rank with a family"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Family ;
+    ns:term_status "testing" .
+
+wo:genus a owl:ObjectProperty ;
+    rdfs:label "genus"@en-gb ;
+    rdfs:comment "associates a taxon rank with a genus"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Genus ;
+    ns:term_status "testing" .
+
+wo:habitat a owl:ObjectProperty ;
+    rdfs:label "habitat"@en-gb ;
+    rdfs:comment "associates a taxon rank with a habitat in which it may typically be found"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Habitat ;
+    ns:term_status "testing" .
+
+wo:kingdom a owl:ObjectProperty ;
+    rdfs:label "kingdom"@en-gb ;
+    rdfs:comment "associates a taxon rank with a kingdom"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Kingdom ;
+    ns:term_status "testing" .
+
+wo:livesIn a owl:ObjectProperty ;
+    rdfs:label "lives in"@en-gb ;
+    rdfs:comment "associates a taxon rank with a habitat in which it lives. Sub-property of wo:habitat to be used for members of the animal kingdom"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Habitat ;
+    ns:term_status "testing" .
+
+wo:order a owl:ObjectProperty ;
+    rdfs:label "order"@en-gb ;
+    rdfs:comment "associates a taxon rank with an order"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Kingdom ;
+    ns:term_status "testing" .
+
+wo:phylum a owl:ObjectProperty ;
+    rdfs:label "phylum"@en-gb ;
+    rdfs:comment "associates a taxon rank with a phylum"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Phylum ;
+    ns:term_status "testing" .
+
+wo:species a owl:ObjectProperty ;
+    rdfs:label "species"@en-gb ;
+    rdfs:comment "associates a taxon rank with a species"@en-gb ;
+    rdfs:domain wo:TaxonRank ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:range wo:Species ;
+    ns:term_status "testing" .
+
+terms:LicenseDocument a owl:Class ;
+    rdfs:label "License Document"@en ;
+    metadata:prefixIRI "terms:LicenseDocument" ;
+    rdfs:comment "A legal document giving official permission to do something with a resource."@en ;
+    rdfs:isDefinedBy terms: .
+
+terms:ProvenanceStatement a owl:Class ;
+    rdfs:label "Provenance Statement"@en ;
+    metadata:prefixIRI "terms:ProvenanceStatement" ;
+    rdfs:comment "Any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+    rdfs:isDefinedBy terms: ;
+    rdfs:subClassOf owl:Thing .
+
+sosa:Platform a owl:Class ;
+    metadata:prefixIRI "sosa:Platform" ;
+    rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.\"@en ;" ;
+    rdfs:isDefinedBy "sosa" ;
+    rdfs:subClassOf owl:Thing ;
+    skos:definition "\"A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.\"@en ;" ;
+    skos:example "\"A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators.\"@en ;" .
+
+sosa:observes a owl:ObjectProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range sosa:Observation .
+
+foaf:Image a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+foaf:based_near a owl:ObjectProperty ;
+    rdfs:label "based near" ;
+    rdfs:comment "A location that something is based near, for some broadly human notion of near." ;
+    rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range sosa:FeatureOfInterest ;
+    ns:term_status "testing" .
+
+foo: a owl:Ontology ;
+    ns3:abstract "The Forest Observatory Ontology (FOO) comprises a novel upper-level ontology that integrates wildlife data generated by sensors."@en ;
+    ns3:description "This ontology describes wildlife observations generated by sensors."@en ;
+    ns3:title "Forest Observatory Ontology (FOO) Ontology"@en ;
+    terms:created "February 1st, 2023"@en ;
+    terms:creator "Naeima Hamed"@en ;
+    terms:license <http://creativecommons.org/licenses/by-sa/4.0/> ;
+    ns1:preferredNamespacePrefix "foo"@en ;
+    ns1:preferredNamespaceUri "https://w3id.org/def/foo#" ;
+    schema:citation "Cite this vocabulary as: Hamed, N., Forest Observatory Ontology (FOO) Ontology"@en ;
+    owl:versionIRI foo: .
+
+foo:Bulk_Density a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Measured Bulk Density of soil sample" ;
+    foo:hasValue "0.6"^^xsd:float .
+
+ns2:N a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "carbon to nitrogen ratio of the soil sample" ;
+    ns2:N "11.9"^^xsd:float .
+
+ns2:P a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:float .
+
+foo:Horizon a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Soil horizon sampled" ;
+    sosa:hasSimpleResult "Sample_Name" .
+
+foo:Horizon_Depth a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Depth of the organic soil horizon sampled" ;
+    sosa:hasSimpleResult "2.5"^^xsd:float .
+
+foo:Identifier a owl:NamedIndividual,
+        sosa:ObservableProperty,
+        sosa:Observation ;
+    skos:definition "Unique Soil Sample Identifier" ;
+    sosa:hasFeatureOfInterest foo:image ;
+    sosa:hasResult "DGFC_" .
+
+foo:Land_Use a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Land use of the study plots: Unlogged tropical forest, Logged tropical forest or Oil palm plantation" ;
+    sosa:hasSimpleResult "Unlogged" ;
+    foo:hasLand_Use "plants" .
+
+foo:LocalDate a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    sosa:resultTime "2005-11-12T12:05:05"^^xsd:dateTime .
+
+foo:LocalTime a owl:NamedIndividual ;
+    sosa:resultTime "2005-11-12T12:05:05"^^xsd:dateTime .
+
+foo:Mustelidae a owl:NamedIndividual,
+        sosa:FeatureOfInterest ;
+    wo:family foo:Mustelidae .
+
+foo:Name a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "The named assigned to an image at collection time" ;
+    foo:hasName "Imahe_name" .
+
+foo:Path a owl:NamedIndividual ;
+    skos:definition "The URI to point at the location of the image in secure cloud" ;
+    foo:hasPath "example.com"^^xsd:anyURI .
+
+foo:Plot_Name a owl:NamedIndividual ;
+    skos:definition "Name of the 1 Ha plot sampled" ;
+    foo:hasPlot_Name "NAME" .
+
+foo:Site a owl:NamedIndividual,
+        sosa:FeatureOfInterest ;
+    skos:definition "Geographical area/site which samples were taken from" ;
+    sosa:hasSimpleResult "\"Valley\"" .
+
+foo:Soil a owl:NamedIndividual,
+        sosa:FeatureOfInterest ;
+    rdfs:comment "Soil or dirt, is a mixture of organic matters, minerals, ases, liquids, and organisms that collectively support life." .
+
+foo:Soil_Moisture a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Gravimetric soil moisture" ;
+    foo:hasMoisture 225 .
+
+foo:Soil_pH a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "Measured pH of the soil sample" ;
+    foo:hasSoil_pH "4.87"^^xsd:float .
+
+foo:Subplot a owl:NamedIndividual ;
+    skos:definition "Number of the subplot sampled within each 1 Ha plot Numeric" ;
+    foo:hasSubplot "subplot" .
+
+foo:inorganic_P a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "inorganic/soluble phosphorus concentration of the soil sample" ;
+    sosa:hasSimpleResult "36.65"^^xsd:float .
+
+foo:localDate a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "The current local date in Sabah, Malaysia when the image collects its readings." ;
+    sosa:resultTime "2014-04-12T13:20:00-05:00"^^xsd:dateTime .
+
+foo:localTime a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "The current local time in Sabah, Malaysia when the image collects its readings." ;
+    sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime .
+
+foo:make a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "The make of the trail camera used to capture the image" ;
+    foo:hasMake "Reckno" .
+
+foo:model a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "The model of the trail camera used to capture the image" ;
+    foo:hasModel "\"model\"" .
+
+foo:total_C a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "total carbon content of the soil sample" ;
+    foo:hasTotal_C "22.23"^^xsd:float .
+
+foo:total_N a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "total nitrogen content of the soil sample" ;
+    foo:hasTotal_N "23.65"^^xsd:float .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Reptilia> a owl:Class ;
+    rdfs:comment "Reptilia is a vertebrate animal of a class that includes snakes, lizards, crocodiles, turtles, and tortoises. They are distinguished by having a dry scaly skin and typically laying soft-shelled eggs on land." ;
+    rdfs:subClassOf wo:Class .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Viverridae> a owl:Class ;
+    rdfs:isDefinedBy "Viverridae is a family of small to medium-sized, feliform mammals. The viverrids comprise 33 species placed in 14 genera. This family was named and first described by John Edward Gray in 1821. Viverrids occur all over Africa, southern Europe, and South and Southeast Asia, across the Wallace Line",
+        "https://en.wikipedia.org/wiki/Viverridae" ;
+    rdfs:subClassOf wo:Family .
+
+wo:Genus a owl:Class ;
+    rdfs:label "Genus"@en-gb ;
+    metadata:prefixIRI "wo:Genus" ;
+    rdfs:comment "A genus is a scientific way of showing that species are very closed related to each other. In fact the first word of the species' scientific name is its genus. So for lions (Panthera leo), Panthera is the genus and tells us that they are closely related to tigers (Panthera tigris), because they share the name"@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Genus>,
+        <http://www.bbc.co.uk/nature/genus> ;
+    rdfs:subClassOf wo:TaxonRank ;
+    ns:term_status "testing" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Squamata> a owl:Class ;
+    rdfs:subClassOf wo:Order .
+
+wo:Species a owl:Class ;
+    rdfs:label "species"@en-gb ;
+    metadata:prefixIRI "wo:Species" ;
+    rdfs:comment "Generic class defining a biological species"@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Species>,
+        <http://www.bbc.co.uk/nature/species> ;
+    rdfs:subClassOf wo:TaxonRank ;
+    ns:term_status "testing" .
+
+foo:DateTime a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "The date and time of the GPS collar observation" ;
+    sosa:resultTime "2013-07-06T21:03:17"^^xsd:dateTime .
+
+foo:PDOP a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Positional Dilution of Precision (DDOP) describes the error caused by the relative position of the GPS satellites. The more signals a GPS reciever can \"see\" (speard vs near each other), the more precise it can be." ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range xsd:integer ;
+    foo:PDOP 3 .
+
+foo:image a owl:NamedIndividual,
+        sosa:FeatureOfInterest,
+        foaf:Image ;
+    sosa:isFeatureOfInterestOf foo:Identifier .
+
+foo:python a owl:NamedIndividual,
+        sosa:FeatureOfInterest,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Reptilia>,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Squamata>,
+        <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata> .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Carnivora> a owl:Class ;
+    rdfs:comment "Carnivora is a monophyletic order of placental mammals consisting of the most recent common ancestor of all cats and dogs, and all descendants of that ancestor. Members of this group are formally referred to as carnivorans, and have evolved to specialize in eating flesh." ;
+    rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Carnivora" ;
+    rdfs:subClassOf wo:Order .
+
+wo:Phylum a owl:Class ;
+    rdfs:label "Phylum"@en-gb ;
+    metadata:prefixIRI "wo:Phylum" ;
+    rdfs:comment "A phylum - also known as a division when referring to plants - is a scientfic way of grouping together related organisms. All the members of a phylum have a common ancestor and anatomical similarities. For instance, all the arthropods have external skeletons. Phlya are large groups and are further subdivided into classes, orders, families and so on."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Phylum>,
+        <http://www.bbc.co.uk/nature/phylum> ;
+    rdfs:subClassOf wo:TaxonRank ;
+    ns:term_status "testing" .
+
+wo:TaxonName a owl:Class ;
+    rdfs:label "Taxon Name"@en-gb ;
+    metadata:prefixIRI "wo:TaxonName" ;
+    rdfs:comment "A taxonomic name, describing the structure and provenance of a taxonomic name."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:subClassOf owl:Thing ;
+    owl:disjointWith wo:TaxonRank ;
+    ns:term_status "testing" .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> a owl:Class ;
+    rdfs:label "Spatial Thing",
+        "SpatialThing" ;
+    metadata:prefixIRI "wgs84_pos:SpatialThing" ;
+    rdfs:comment """Anything with spatial extent, i.e. size, shape, or position.\r
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.\r
+""" ;
+    rdfs:subClassOf owl:Thing .
+
+foo:hasValue a owl:DatatypeProperty ;
+    rdfs:domain sosa:ObservableProperty ;
+    rdfs:range rdfs:Literal .
+
+wo:Class a owl:Class ;
+    rdfs:label "Class"@en-gb ;
+    metadata:prefixIRI "wo:Class" ;
+    rdfs:comment "A class is a scientific way to group related organisms together, some examples of classes being jellyfish, reptiles and sea urchins. Classes are big groups and contain within them smaller groupings called orders, families, genera and species."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Class_%28biology%29>,
+        <http://www.bbc.co.uk/nature/class> ;
+    rdfs:subClassOf wo:TaxonRank ;
+    owl:equivalentClass wo:Family ;
+    ns:term_status "testing" .
+
+wo:Kingdom a owl:Class ;
+    rdfs:label "Kingdom"@en-gb ;
+    metadata:prefixIRI "wo:Kingdom" ;
+    rdfs:comment "Kingdoms are the major categories into which scientists divide up all living things. The main kingdoms are animals, plants, fungi and bacteria, although there are others. Each kingdom has its own suite of defining characteristics - for instance plants have rigid cell walls, whilst animals do not."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Kingdom_%28biology%29>,
+        <http://www.bbc.co.uk/nature/kingdom> ;
+    rdfs:subClassOf wo:TaxonRank ;
+    ns:term_status "testing" .
+
+wo:Order a owl:Class ;
+    rdfs:label "Order"@en-gb ;
+    metadata:prefixIRI "wo:Order" ;
+    rdfs:comment "An order is a scientific way to categorise related organisms. An order is a smaller grouping than a class, but bigger than a family or genus. Examples of orders are willows, cockroaches and primates."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Order_%28biology%29>,
+        <http://www.bbc.co.uk/nature/order> ;
+    rdfs:subClassOf wo:TaxonRank ;
+    ns:term_status "testing" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata> a owl:Class ;
+    rdfs:comment """A large phylum of animals that includes the vertebrates together with the sea squirts and lancelets. They are distinguished by the possession of a notochord at some stage during their development.\r
+Source: google.com""" ;
+    rdfs:subClassOf wo:Phylum .
+
+wo:Family a owl:Class ;
+    rdfs:label "Family"@en-gb ;
+    metadata:prefixIRI "wo:Family" ;
+    rdfs:comment "A family is a scientific grouping of closely related organisms. It has smaller groups, called genera and species, within it. A family can have a lot of members or only a few. Examples of families include the cats (Felidae), the gulls (Laridae) and the grasses (Poaceae)."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Family_%28biology%29>,
+        <http://www.bbc.co.uk/nature/family> ;
+    rdfs:subClassOf wo:TaxonRank ;
+    ns:term_status "testing" .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "point" ;
+    metadata:prefixIRI "wgs84_pos:Point" ;
+    iot-lite:relativeLocation "" ;
+    rdfs:comment """ \r
+Uniquely identified by lat/long/alt. i.e.\r
+\r
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),\r
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).\r
+\r
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).\r
+  """,
+        """A point, typically described using a coordinate system relative to Earth, such as WGS84.\r
+  """ ;
+    rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+wo:Habitat a owl:Class ;
+    rdfs:label "Habitat"@en-gb ;
+    metadata:prefixIRI "wo:Habitat" ;
+    rdfs:comment "A habitat, or biome, is the type of environment in which plant and animals live. Habitat is dictated by what kinds of plants grow there, the climate and the geography. Rainforest, coral reefs and the tundra are all habitats where particular kinds of plants and animals might be found."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Habitat>,
+        <http://www.bbc.co.uk/nature/habitats> ;
+    rdfs:subClassOf owl:Thing ;
+    ns:term_status "testing" .
+
+sosa:FeatureOfInterest a owl:Class ;
+    rdfs:label "Feature Of Interest"@en ;
+    metadata:prefixIRI "sosa:FeatureOfInterest" ;
+    rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf owl:Thing ;
+    skos:definition "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+    skos:example "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
+
+foo:ExtTemp a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "External Temperature of the elephant at data collection instant" ;
+    foo:hasTemp 2.7e+01 .
+
+wo:TaxonRank a owl:Class ;
+    rdfs:label "Taxonomic Rank"@en-gb ;
+    metadata:prefixIRI "wo:TaxonRank" ;
+    rdfs:comment "Generic concept for a taxonomic rank such as a Genus or Species."@en-gb ;
+    rdfs:isDefinedBy wo: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Taxonomic_rank> ;
+    rdfs:subClassOf owl:Thing ;
+    ns:term_status "testing" .
+
+owl:Thing metadata:prefixIRI "owl:Thing" .
+
+foo:Count a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "GPS collar dataset's observation count per dataset" ;
+    foo:hasCount 1 .
+
+foo:GMTDate a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    skos:definition "The GMT date in Sabah, Malaysia when the GPS collar collected  its readings." ;
+    sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime .
+
+foo:GMTTime a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "The current local date in Sabah, Malaysia when the image collects its readings." ;
+    sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime .
+
+foo:Distance a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Distance (m) travelled from the previous data collection instant to the present." ;
+    foo:hasDistance "1.2"^^xsd:float .
+
+foo:Cov a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "GPS collar dataset: satellite coverage, the higher number the stronger coverage." ;
+    foo:hasCov 1 .
+
+foo:Direction a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Direction that the elephant is travelling at the current data collection instant." ;
+    foo:hasDirection "0.4"^^xsd:float .
+
+foo:HDOP a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Horizontal Dilution of Precision (HDOP) measures GPS accuracy in Latitude and Longitude. The lower value the better precision." ;
+    sosa:hasSimpleResult 1 .
+
+foo:Temperature a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Estimate temperature of the elephant in Celsius at data collection instant." ;
+    foo:hasTemperature 2.1e+01 .
+
+foo:Speed a owl:NamedIndividual,
+        sosa:ObservableProperty ;
+    rdfs:comment "Speed of the elephant at current data collection instant." ;
+    foo:hasSpeed "35.5"^^xsd:float .
+
+sosa:Sensor a owl:Class ;
+    rdfs:label "Sensor"@en ;
+    metadata:prefixIRI "sosa:Sensor" ;
+    rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf owl:Thing ;
+    skos:definition "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+    skos:example "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+
+sosa:Observation a owl:Class ;
+    rdfs:label "Observation"@en ;
+    metadata:prefixIRI "sosa:Observation" ;
+    rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf owl:Thing ;
+    skos:definition "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+    skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
+
+sosa:ObservableProperty a owl:Class ;
+    rdfs:label "Observable Property"@en ;
+    metadata:prefixIRI "sosa:ObservableProperty" ;
+    rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf owl:Thing ;
+    skos:definition "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+    skos:example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+
