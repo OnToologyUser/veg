@@ -15,7 +15,7 @@ graph = Graph()
 graph.parse(source=ontology_file, format="ttl")
 
 # Set the namespace for your ontology
-namespace = Namespace("http://www.ontology/ns/foo/1.1#")
+namespace = Namespace("https://w3id.org/def/foo#")
 namespace1 = Namespace("http://www.w3.org/ns/sosa/")
 
 # RML mapping code
