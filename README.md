@@ -1,4 +1,4 @@
-### Vegetation Data RDF Conversion Guide
+## Vegetation Data RDF Conversion Guide
 Welcome to our Vegetation Data RDF Conversion guide. This documentation is designed to help you transform CSV data related to vegetation into an RDF (Resource Description Framework) graph utilizing Python and the rdflib library. By applying an ontology, the script structures the data within the RDF format, enhancing its semantic querying capabilities and ensuring seamless integration within the Semantic Web ecosystem.
 
 ## Prerequisites
