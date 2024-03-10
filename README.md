@@ -33,5 +33,5 @@ Upon successful execution, the script generates an RDF XML file named VegKG.xml 
 ## Customization Guidelines
 Update namespace placeholders (namespace, namespace1) and predicates (e.g., namespace.Plot_no, namespace.Site_plot_code) with the actual values from your ontology.
 Ensure the script's logic for parsing the CSV file matches the layout and column structure of your data.
-## Output File
-The conversion process results in the creation of VegKG.xml, an RDF graph serialized in XML format. This file represents your vegetation data as RDF triples, organized according to the semantics of your ontology.
+## Output File (https://naeima.github.io/veg/index.ttl)
+The conversion process results in the creation of VegKG.xml, an RDF graph serialized in XML format. This file represents your vegetation data as RDF triples, organized according to the semantics of your ontology. 
