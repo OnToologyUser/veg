@@ -7,9 +7,7 @@ Before initiating the conversion process, ensure the following requirements are 
 - Python 3.x
 - `rdflib`
 
-
-'''bash
- pip install rdflib
+ - pip install rdflib
 
 ## How to Convert Your Data
 Follow the outlined steps to convert your CSV data into an RDF graph:
@@ -27,8 +25,7 @@ Adapt the CSV processing logic within the script to accurately map your CSV data
 ## Executing the Script
 With your data files ready and the script customized, run the script using Python to perform the conversion:
 
-'''bash
-python veg.py
+- python veg.py
 
 ## Checking the Output
 Upon successful execution, the script generates an RDF XML file named VegKG.xml in your project directory. This file encapsulates the RDF representation of your vegetation data, structured according to the ontology provided.
