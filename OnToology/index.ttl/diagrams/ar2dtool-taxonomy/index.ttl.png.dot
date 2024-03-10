@@ -1,0 +1,48 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "sosa:FeatureOfInterest" "http://web.resource.org/cc/Prohibition" "https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom/Animalia" "ns5:FreshwaterHabitat" "http://web.resource.org/cc/License" "dc:PhysicalResource" "ns5:Species" "ns5:Class" "dc:LicenseDocument" "ns5:Kingdom" "ns5:Family" "http://web.resource.org/cc/Work" "https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Civettictis" ":Carnivora" "ns5:TaxonRank" "foaf:Person" ":Elephantidae" ":Mammalia" "ns5:Order" "ns5:Genus" ":Squamata" "dc:Policy" ":Chordata" "sosa:Platform" "ns5:TaxonName" "geo:SpatialThing" "sosa:Observation" "http://www.w3.org/2001/XMLSchema-datatypes#date" ":Reptilia" "dc:ProvenanceStatement" "sosa:ObservableProperty" "http://web.resource.org/cc/Requirement" "https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Loxodonta" "sosa:Sensor" "ns5:Habitat" ":Proboscidea" "foaf:Image" "dc:Frequency" "ns5:Phylum" ":Viverridae" "ns5:MarineHabitat" "geo:Point" "ns5:TerrestrialHabitat" ; /*classes style*/
+	"ns5:Genus" -> "ns5:TaxonRank" [ label = "rdfs:subClassOf" ];
+	"ns5:FreshwaterHabitat" -> "ns5:Habitat" [ label = "rdfs:subClassOf" ];
+	"sosa:Platform" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"foaf:Image" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	":Mammalia" -> "ns5:Class" [ label = "rdfs:subClassOf" ];
+	"ns5:Species" -> "ns5:TaxonRank" [ label = "rdfs:subClassOf" ];
+	":Viverridae" -> "ns5:Family" [ label = "rdfs:subClassOf" ];
+	"geo:Point" -> "geo:SpatialThing" [ label = "rdfs:subClassOf" ];
+	"ns5:TaxonName" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"http://web.resource.org/cc/Prohibition" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"dc:Policy" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"ns5:TaxonRank" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"dc:Frequency" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"ns5:MarineHabitat" -> "ns5:Habitat" [ label = "rdfs:subClassOf" ];
+	"http://web.resource.org/cc/Requirement" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	":Reptilia" -> "ns5:Class" [ label = "rdfs:subClassOf" ];
+	":Carnivora" -> "ns5:Order" [ label = "rdfs:subClassOf" ];
+	"http://web.resource.org/cc/Work" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"sosa:Sensor" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"ns5:TerrestrialHabitat" -> "ns5:Habitat" [ label = "rdfs:subClassOf" ];
+	"ns5:Phylum" -> "ns5:TaxonRank" [ label = "rdfs:subClassOf" ];
+	"ns5:Habitat" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"geo:SpatialThing" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"dc:PhysicalResource" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	":Chordata" -> "ns5:Phylum" [ label = "rdfs:subClassOf" ];
+	"https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Civettictis" -> "ns5:TaxonName" [ label = "rdfs:subClassOf" ];
+	"http://web.resource.org/cc/License" -> "dc:LicenseDocument" [ label = "rdfs:subClassOf" ];
+	"dc:ProvenanceStatement" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"ns5:Order" -> "ns5:TaxonRank" [ label = "rdfs:subClassOf" ];
+	"sosa:Observation" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Loxodonta" -> "ns5:TaxonName" [ label = "rdfs:subClassOf" ];
+	"ns5:Class" -> "ns5:TaxonRank" [ label = "rdfs:subClassOf" ];
+	"foaf:Person" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	":Squamata" -> "ns5:Order" [ label = "rdfs:subClassOf" ];
+	"ns5:Family" -> "ns5:TaxonRank" [ label = "rdfs:subClassOf" ];
+	"sosa:FeatureOfInterest" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"sosa:ObservableProperty" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"http://www.w3.org/2001/XMLSchema-datatypes#date" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"ns5:Kingdom" -> "ns5:TaxonRank" [ label = "rdfs:subClassOf" ];
+	":Proboscidea" -> "ns5:Order" [ label = "rdfs:subClassOf" ];
+	":Elephantidae" -> "ns5:Family" [ label = "rdfs:subClassOf" ];
+	"https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom/Animalia" -> "ns5:Kingdom" [ label = "rdfs:subClassOf" ];
+
+}
