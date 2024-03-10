@@ -1,15 +1,15 @@
-## Vegetation Data RDF Conversion Guide
+# Vegetation Data RDF Conversion Guide
 Welcome to our Vegetation Data RDF Conversion guide. This documentation is designed to help you transform CSV data related to vegetation into an RDF (Resource Description Framework) graph utilizing Python and the rdflib library. By applying an ontology, the script structures the data within the RDF format, enhancing its semantic querying capabilities and ensuring seamless integration within the Semantic Web ecosystem.
 
 ## Prerequisites
 Before initiating the conversion process, ensure the following requirements are met:
 
-Python 3.x: Your system should have Python 3.x installed.
-rdflib Library: The rdflib library must be installed in your Python environment. If you haven't installed it yet, you can do so using pip:
+- Python 3.x
+- `rdflib`
+
+
 '''bash
-pip install rdflib
-
-
+ pip install rdflib
 
 ## How to Convert Your Data
 Follow the outlined steps to convert your CSV data into an RDF graph:
@@ -29,7 +29,6 @@ With your data files ready and the script customized, run the script using Pytho
 
 '''bash
 python veg.py
-
 
 ## Checking the Output
 Upon successful execution, the script generates an RDF XML file named VegKG.xml in your project directory. This file encapsulates the RDF representation of your vegetation data, structured according to the ontology provided.
