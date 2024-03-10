@@ -1,0 +1,1577 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ns0: <https://w3id.org/def/foo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns1: <http://data.bioontology.org/metadata/> .
+@prefix ns2: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix schema: <http://schema.org/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ns3: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns4: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
+@prefix ns5: <https://www.bbc.co.uk/ontologies/wildlife-ontology#> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+
+<https://w3id.org/def/foo#Sabahmassmallsteep>
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2" ;
+  ns0:Site_plot_code "F15P1", "F15P2" ;
+  ns0:Date "17/10/2017" ;
+  ns0:Tree_individual_no "3011", "3012", "3015", "3016", "3020", "3022", "3023", "3024", "3027", "3028", "3029", "3030", "3031", "3034", "3041", "3046", "3056", "3058", "3059", "3061", "3086", "3087", "3093", "3094", "3095", "3097", "3099", "3100", "3102", "3115", "3119", "3121", "3132", "3136" ;
+  ns0:Tree_ID "Ficus", "Diospyros", "Alstonia", "Rinorea bengalensis", "Brownlowia" ;
+  ns0:Tree_dbh_cm "16.4", "18.3", "32", "24", "33", "38", "18", "20.5", "32.5", "31", "26.3", "11", "27.5", "21.5", "22.5", "34.5", "24.5", "25.5", "25", "30", "35", "22", "17", "27", "11.5", "13.5", "36" ;
+  ns0:Tree_height_m "NA", "10", "12", "9", "13", "11", "14" ;
+  ns0:Tree_N_lianas "2", "6", "7", "31", "4", "10", "3", "5", "1", "11" ;
+  ns0:Liana_dbh_cm "5.8", "4", "5", "2", "2.5", "3.5", "3", "6.5", "4.5", "3.3", "2.2", "2.3", "3.8", "2.8", "3.2", "4.2", "6.3", "2.7", "6.8", "4.8", "4.4", "9", "10.5", "4.3", "7.1", "8", "8.5", "3.6", "6", "4.6", "7.5", "5.5", "7" ;
+  ns0:Tree_notes "Multiple stems", "" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:RekaHalus12ha
+  a sosa:Observation ;
+  ns0:Plot_no "2", "1" ;
+  ns0:Site_plot_code "F6P2", "F6P1" ;
+  ns0:Date "16/08/2017", "18/08/2017" ;
+  ns0:Tree_individual_no "826", "831", "839", "841", "845", "846", "848", "854", "856", "857", "859", "861", "862", "863", "864", "865", "866", "867", "869", "870", "872", "874", "877", "891", "893", "896", "898", "902", "903", "904", "911", "912", "913", "914", "915", "916", "917", "920", "921", "928", "930", "932" ;
+  ns0:Tree_ID "Ficus", "Alangium javanicum", "Macaranga gigantea", "Artocarpus", "Parashorea tomentella", "Dehaasia", "Litsea", "Glochidion borneensis", "Glochidion", "Syzygium", "Calophyllum", "Mallotus wrayi", "Shorea", "Diospyros", "Pterospermum", "Macaranga pearsonii", "Paranephelium", "Fagraea", "Dillenia excelsa", "Chisocheton" ;
+  ns0:Tree_dbh_cm "12.7", "18", "11.7", "11.5", "16", "32", "15", "27", "26.4", "13.5", "30.2", "26", "22.5", "13", "13.3", "20.5", "28", "37", "35", "23.5", "23", "10.6", "100", "50", "39.5", "34.2", "38", "17.8", "30.5", "20", "46", "16.5", "16.4", "23.8", "63", "29" ;
+  ns0:Tree_height_m "NA", "10", "15", "12", "25", "8", "13", "5", "30" ;
+  ns0:Tree_N_lianas "6", "14", "3", "1", "2", "5", "11", "4", "7", "8" ;
+  ns0:Liana_dbh_cm "2", "2.8", "3", "2.6", "3.1", "8.8", "2.2", "2.5", "4.2", "3.4", "6", "3.5", "4.5", "2.7", "2.1", "2.4", "7.4", "6.5", "3.2", "4", "5.1", "4.8", "3.8", "3.6", "5", "5.2", "7.2", "5.7", "3.7", "5.5", "7.5", "6.2", "3.3", "4.3", "11.5", "8", "7", "4.1", "2.3", "7.3", "2.9", "9" ;
+  ns0:Tree_notes "Multiple stems", "", "Tree nearly dead" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:SabahmasRainbowRidge
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2", "3" ;
+  ns0:Site_plot_code "F16P1", "F16P2", "F16P3" ;
+  ns0:Date "19/10/2017", "18/10/2017" ;
+  ns0:Tree_individual_no "3145", "3154", "3159", "3164", "3165", "3167", "3169", "3171", "3174", "3175", "3177", "3180", "3185", "3186", "3188", "3190", "3191", "3192", "3194", "3196", "3202", "3203", "3204", "3205", "3206", "3208", "3209", "3210", "3212", "3213", "3214", "3216", "3217", "3225", "3226", "3227", "3240", "3241", "3247", "3248", "3253", "3257", "3266", "3268", "3269", "3272", "3279", "3282", "3289", "3290", "3292", "3300", "3305", "3309", "3313", "3315", "3319", "3320", "3321", "3322", "3323", "3324", "3326", "3328", "3330", "3332", "3334", "3336", "3337", "3338", "3340", "3342", "3343", "3344", "3345", "3346", "3347", "3349", "3351", "3352", "3353", "3355", "3356", "3357", "3358", "3360", "3361", "3363", "3364", "3366", "3368" ;
+  ns0:Tree_ID "Dryobalanops lanceolata", "Koilodepas longifolium", "Parashorea tomentella", "Palaquium", "Shorea", "Crudia tenuipes", "Crudia", "Ficus", "Durio", "Hopea ferruginea", "Aglaia", "Shorea gibbosa", "Drypetes longifolia", "Diospyros", "Neonauclea", "Archidendron", "Callicarpa", "Shorea leptoderma", "Drypetes", "Artocarpus anisophyllus", "Dimocarpus longan", "Dipterocarpus caudiferus", "Chisocheton", "Actinodaphne", "Mallotus", "Garcinia", "Macaranga pearsonii", "Chisocheton sarawakensis", "Heynea trijuga", "Brownlowia peltata", "Scaphium", "Microcos", "Nauclea subdita", "Glochidion glabrum", "Baccaurea", "Shorea fallax", "Dialium kunstleri", "Myristica", "Neolamarckia cadamba", "Parartocarpus", "Teijsmanniodendron" ;
+  ns0:Tree_dbh_cm "11.2", "14", "15.2", "60", "14.2", "11.8", "30", "20.4", "45", "20.9", "16.5", "15.7", "21.5", "55", "18", "12", "13.2", "20", "50", "19", "75", "15", "16", "12.4", "26", "28", "22", "17", "10", "24", "18.3", "35", "23.3", "25", "90", "42", "12.7", "33.8", "10.5", "32.2", "80", "13.3", "38", "17.7", "37", "43", "13", "32", "12.2", "15.5" ;
+  ns0:Tree_height_m "NA", "30", "11", "18", "25", "12", "28", "35", "15", "20", "23", "16", "45", "10", "38", "13" ;
+  ns0:Tree_N_lianas "1", "3", "4", "2", "9", "5", "8", "6", "7", "13", "11", "15", "14", "10" ;
+  ns0:Liana_dbh_cm "2.1", "5", "4", "4.2", "2", "17.3", "9", "3", "8", "5.5", "4.5", "2.8", "3.6", "4.4", "6.4", "2.3", "6", "5.3", "4.9", "3.3", "9.2", "7.7", "4.6", "7", "3.5", "9.4", "6.5", "4.7", "2.2", "2.5", "4.8", "4.1", "15", "6.8", "12", "11", "3.2", "2.6", "13.5", "6.2", "10", "3.4", "7.4", "5.6", "2.7", "2.4", "3.8", "13", "9.5", "4.3", "7.2", "20.2", "5.8", "3.1", "17.8", "20.5", "5.2", "5.9", "6.6", "10.2", "10.6", "6.7", "3.7", "3.9", "12.8", "7.8", "6.3", "16.5", "14" ;
+  ns0:Tree_notes "", "Based on S15b", "Multiple stems" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:elephant#Putut
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Putut, here, the GPS collar (sensor) is named after her." .
+
+ns0:Forest_type
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasSimpleResult "HCV High Conservation Value" ;
+  skos:definition "type of forest site, one of \"Continous primary\", \"Continous logged\", \"HCV\" (i.e., High Conservation Value; fragmented sites in oil palm plantations)" .
+
+ns0:SriKamusan10ha
+  a sosa:Observation ;
+  ns0:Plot_no "2", "1" ;
+  ns0:Site_plot_code "F13P2", "F13P1" ;
+  ns0:Date "10/09/2017", "10/11/2017" ;
+  ns0:Tree_individual_no "2536", "2557", "2562", "2563", "2564", "2566", "2568", "2574", "2578", "2579", "2589", "2590", "2593", "2594", "2599", "2601", "2602", "2608", "2612", "2614", "2720", "2723", "2724", "2750", "2753", "2760", "2761", "2775", "2780", "2783", "2786", "2787", "2788", "2789", "2790", "2794", "2797", "2798", "2803", "2806", "2807", "2810", "2815", "2820", "2824" ;
+  ns0:Tree_ID "Microcos", "Scorodocarpus borneensis", "Crateva", "Palaquium", "Shorea", "Anisophyllea corneri", "Barringtonia", "Drypetes", "Archidendron", "Dryobalanops lanceolata", "Hydnocarpus", "Psydrax", "Shorea parvifolia", "Dryobalanops beccarii", "Diospyros", "Dehaasia", "Knema hirtella", "Santiria", "Hopea", "Gironniera", "Croton", "Semecarpus glaucas", "Madhuca", "Alstonia", "Macaranga pearsonii", "Prunus javanica", "Crudia tenuipes" ;
+  ns0:Tree_dbh_cm "11.2", "55", "14.1", "50", "56", "57", "65", "25", "46.8", "20.2", "26", "12", "24.5", "38", "15", "42", "34", "18", "23.5", "15.7", "28", "14.2", "22.2", "25.6", "12.7", "11.7", "28.4", "33", "30", "24.8", "10.5", "10", "60", "15.6", "11", "45", "40", "20.5", "47" ;
+  ns0:Tree_height_m "NA", "18", "35", "30", "16", "13", "20", "12", "10" ;
+  ns0:Tree_N_lianas "1", "5", "9", "2", "3", "4", "17", "6", "7" ;
+  ns0:Liana_dbh_cm "4.5", "5", "4", "12", "5.5", "3.1", "3", "2", "2.3", "4.1", "3.7", "2.5", "2.7", "6.5", "5.7", "4.8", "5.3", "6", "10", "3.8", "2.8", "7", "5.4", "3.5", "5.6", "8", "3.4", "2.4", "4.2", "3.3", "4.4", "2.2", "3.2", "9", "3.6", "5.8" ;
+  ns0:Tree_notes "", "Multiple stems" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:DanumCoupe88
+  a sosa:Observation ;
+  ns0:Plot_no "3", "2", "1" ;
+  ns0:Site_plot_code "F17P3", "F17P2", "F17P1" ;
+  ns0:Date "24/10/2017", "27/10/2017" ;
+  ns0:Tree_individual_no "3378", "3382", "3385", "3394", "3400", "3410", "3411", "3412", "3415", "3420", "3421", "3425", "3426", "3428", "3432", "3433", "3436", "3440", "3441", "3445", "3447", "3449", "3454", "3467", "3484", "3489", "3498", "3501", "3503", "3510", "3514", "3515", "3516", "3518", "3523", "3525", "3528", "3531", "3533", "3536", "3538", "3728", "3736", "3738", "3739", "3741", "3744", "3752", "3754", "3759", "3760", "3761", "3763", "3765", "3770", "3772", "3778", "3780", "3781", "3782" ;
+  ns0:Tree_ID "Madhuca kingiana", "Croton", "Shorea macrophylla", "Dehaasia", "Drypetes", "Diospyros", "Shorea pauciflora", "Canarium", "Shorea ovalis", "Dipterocarpus caudiferus", "Hopea nervosa", "Shorea fallax", "Vatica", "Scorodocarpus borneensis", "Shorea superba", "Shorea johorensis", "Aporosa", "Ochanostachys amentacea", "Shorea leptoderma", "Mallotus wrayi", "Koilodepas longifolium", "Vatica dulitensis", "Neesia synandra", "Santiria", "Fagraea", "Pternandra", "Parkia speciosa", "Psydrax", "Callicarpa", "Guioa", "Carallia brachiata", "Barringtonia lanceolata", "Dipterocarpus " ;
+  ns0:Tree_dbh_cm "17.5", "12.5", "14.5", "42", "32", "38", "26.6", "70", "14", "36", "35", "11", "17.3", "65", "15", "25.8", "17", "26.4", "22.5", "36.2", "80", "50", "29.8", "24.3", "55", "45", "13.3", "46", "14.2", "12.7", "54", "26", "10", "11.6", "19.5", "37", "25", "29.2", "30", "27", "95", "33" ;
+  ns0:Tree_height_m "20", "NA", "12", "22", "47", "15", "45", "11", "23", "50", "13", "19", "17", "37" ;
+  ns0:Tree_N_lianas "3", "1", "2", "4", "5", "7", "6" ;
+  ns0:Liana_dbh_cm "3", "4", "2.5", "6.5", "3.5", "6", "7.5", "7.1", "10", "6.1", "6.6", "2", "10.2", "4.7", "6.8", "3.6", "4.5", "5.6", "5.5", "3.7", "8.8", "5.8", "7.8", "4.6", "2.8", "5.1", "7", "12", "10.7", "5.3", "5.7", "6.4", "11", "5", "2.1", "8", "6.7", "2.3", "16", "5.2", "8.2", "8.4", "2.4", "13", "2.2", "4.4", "3.3", "12.2", "4.3", "4.8", "5.9", "10.5", "2.7", "7.4" ;
+  ns0:Tree_notes "" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:Sabahmas59ha
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2", "3" ;
+  ns0:Site_plot_code "F3P1", "F3P2", "F3P3" ;
+  ns0:Date "08/02/2017", "08/03/2017", "08/04/2017" ;
+  ns0:Tree_individual_no "315", "316", "357", "359", "361", "383", "385", "387", "395", "407", "408", "409", "411", "442", "451", "453", "458", "460", "461", "463", "465", "474", "476" ;
+  ns0:Tree_ID "Ficus", "Melicope", "Macaranga", "Dipterocarpus", "Baccaurea", "Aglaia" ;
+  ns0:Tree_dbh_cm "13.4", "11.5", "15.5", "55", "28.2", "31", "26", "32", "22.8", "36.7", "18", "40", "17", "22.2", "28", "20", "21.2", "25", "28.4", "33", "14.2" ;
+  ns0:Tree_height_m "NA", "7", "20", "15", "14", "18", "12", "8" ;
+  ns0:Tree_N_lianas "1", "2", "4", "16", "5", "9", "3", "10" ;
+  ns0:Liana_dbh_cm "10", "7", "2", "3", "4.7", "4.2", "2.8", "6", "3.5", "4.8", "4.6", "2.4", "2.5", "4", "5", "2.2", "9.2", "4.5", "3.7", "8", "6.7", "5.4", "3.2", "6.2", "3.3" ;
+  ns0:Tree_notes "", "Multiple stems", "leaning" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:SriKamusan525ha
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2", "3" ;
+  ns0:Site_plot_code "F14P1", "F14P2", "F14P3" ;
+  ns0:Date "10/10/2017", "10/12/2017", "13/10/2017" ;
+  ns0:Tree_individual_no "2621", "2622", "2628", "2634", "2635", "2636", "2641", "2647", "2648", "2660", "2661", "2663", "2666", "2669", "2670", "2673", "2674", "2675", "2692", "2698", "2701", "2703", "2707", "2710", "2712", "2716", "2852", "2853", "2855", "2858", "2860", "2862", "2865", "2868", "2875", "2877", "2878", "2879", "2883", "2884", "2885", "2890", "2903", "2905", "2906", "2907", "2913", "2918", "2919", "2922", "2928", "2929", "2930", "2937", "2943", "2953", "2954", "2956", "2957", "2959", "2960", "2961", "2962", "2967", "2968", "2969", "2972", "2973", "2977", "2979", "2980", "2987", "2992", "2993", "2994", "2995", "2996" ;
+  ns0:Tree_ID "Hopea", "Elaeocarpus", "Scleropyrum", "Croton", "Archidendron clypearia", "Lithocarpus", "Prunus javanica", "Macaranga pearsonii", "Shorea", "Paranephelium", "Archidendron", "Knema", "Canarium", "Scaphium", "Calophyllum", "Macaranga conifera", "Tristaniopsis", "Alstonia", "Elateriospermum tapos", "Melicope", "Parartocarpus", "Cinnamomum", "Ochanostachys amentacea", "Callicarpa", "Artocarpus anisophyllus", "Semecarpus glaucas", "Aglaia", "Shorea macroptera", "Shorea agamii", "Parkia speciosa", "Barringtonia", "Artocarpus", "Shorea fallax", "Teijsmanniodendron", "Chisocheton", "Santiria", "Harpullia arborea" ;
+  ns0:Tree_dbh_cm "12", "17.2", "11.5", "11.3", "27", "26.7", "28", "21.7", "15.5", "25.2", "30", "23.9", "19.5", "12.5", "19.6", "16.7", "13.5", "14.2", "14", "12.8", "19", "18.5", "17", "13", "12.4", "13.2", "14.5", "20", "15.4", "21.9", "25.4", "22", "18", "24", "50", "16.5", "14.1", "32.5", "20.7", "16", "32.3", "19.8", "15", "23.6", "12.2", "11.1", "20.5", "25.7", "10", "11.8", "13.6", "11", "38", "10.5", "10.2", "10.8", "33.6", "14.4", "25", "13.7", "11.9" ;
+  ns0:Tree_height_m "10", "NA", "12", "15", "14", "9", "16", "18", "11", "8", "20", "22" ;
+  ns0:Tree_N_lianas "2", "4", "1", "3", "6", "5", "7", "15", "10", "12" ;
+  ns0:Liana_dbh_cm "2.5", "2", "5", "2.2", "3.5", "3", "2.3", "4.5", "2.8", "8", "2.7", "4", "5.1", "3.9", "7", "3.8", "3.3", "4.8", "5.2", "4.6", "6.8", "3.2", "6", "2.9", "4.3", "2.6", "6.7", "3.6", "3.7", "2.1", "2.4", "3.4", "5.3", "4.2", "5.5", "3.1", "4.7", "10.4" ;
+  ns0:Tree_notes "", "Multiple stems. Based on S7", "Sample IDed by Mike and Postar. S18. Spiny trunk", "Multiple stems", "Based on S7", "Sample IDed by Mike. S19. White sap", "Based on S19" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:DanumMalua
+  a sosa:Observation ;
+  ns0:Plot_no "3", "2", "1" ;
+  ns0:Site_plot_code "F18P3", "F18P2", "F18P1" ;
+  ns0:Date "25/10/2017", "28/10/2017" ;
+  ns0:Tree_individual_no "3599", "3605", "3606", "3622", "3624", "3625", "3642", "3673", "3680", "3683", "3685", "3693", "3696", "3702", "3704", "3708", "3790", "3799", "3811", "3826", "3827", "3829", "3834", "3835", "3837", "3838", "3840", "3841", "3845", "3846", "3852", "3859", "3863", "3864", "3872", "3892", "3893", "3895" ;
+  ns0:Tree_ID "Shorea fallax", "Prunus", "Eusideroxylon zwageri", "Santiria", "Lithocarpus", "Dehaasia", "Polyalthia sumatrana", "Macaranga hypoleuca", "Drypetes", "Shorea", "Aglaia", "Alangium javanicum", "Sindora", "Parashorea malaanonan", "Chisocheton sarawakensis", "Mallotus wrayi", "Dipterocarpus caudiferus", "Madhuca korthalsii", "Callicarpa", "Paranephelium", "Monoon", "Xanthophyllum", "Vatica", "Shorea johorensis", "Macaranga gigantea" ;
+  ns0:Tree_dbh_cm "45", "25", "40", "32", "34.8", "22", "17.5", "47", "30", "48", "55", "78", "20", "16", "52", "65", "19.5", "19", "21.7", "13.5", "11.5", "18.5", "24", "21.9", "20.4", "29.9", "35", "15", "85", "17.2", "50", "60", "39" ;
+  ns0:Tree_height_m "NA", "22", "25", "40", "15", "12", "13", "18", "17", "20", "50", "30", "27" ;
+  ns0:Tree_N_lianas "1", "5", "3", "4", "2", "6", "7", "11" ;
+  ns0:Liana_dbh_cm "7", "8.2", "14", "5", "4", "3.2", "7.8", "3.8", "4.9", "6.2", "2.6", "6.3", "5.2", "2", "3", "2.5", "6", "5.8", "6.4", "7.4", "3.9", "12", "10", "2.2", "2.1", "15", "2.4", "5.5", "5.4", "6.7", "3.5", "4.2", "4.5", "3.3", "7.6", "4.3", "3.7", "3.6", "3.4", "3.1", "9.5", "9.8", "4.7", "2.9", "11", "4.1", "8", "6.5", "4.6", "2.3" ;
+  ns0:Tree_notes "" ;
+  ns0:Subplot_radius_m "30", "20" .
+
+ns0:SapiSugutKoperasi
+  a sosa:Observation ;
+  ns0:Plot_no "3", "2", "1" ;
+  ns0:Site_plot_code "F12P3", "F12P2", "F12P1" ;
+  ns0:Date "10/05/2017", "10/06/2017" ;
+  ns0:Tree_individual_no "2287", "2290", "2300", "2303", "2304", "2308", "2309", "2312", "2314", "2316", "2317", "2320", "2323", "2327", "2329", "2330", "2331", "2334", "2339", "2342", "2348", "2356", "2357", "2359", "2394", "2398", "2403", "2407", "2409", "2412", "2413", "2422", "2423", "2425", "2426", "2428", "2429", "2433", "2436", "2437", "2445", "2447", "2452", "2488", "2496", "2498", "2503", "2508", "2511" ;
+  ns0:Tree_ID "Dehaasia", "Shorea macroptera", "Chisocheton", "Helicia", "Shorea", "Croton", "Dialium kunstleri", "Glochidion", "Macaranga gigantea", "Microcos", "Hopea nervosa", "Archidendron", "Neesia", "Macaranga pearsonii", "Drypetes", "Vatica", "Lithocarpus", "Neonauclea", "Artocarpus", "Syzygium", "Pternandra", "Teijsmanniodendron", "Hopea", "Diospyros", "Tabernaemontana", "Monoon", "Calophyllum", "Myristica", "Ficus", "Dryobalanops lanceolata" ;
+  ns0:Tree_dbh_cm "48", "40.9", "12.2", "30.4", "29.1", "40.2", "33", "46", "32", "17.2", "20.9", "13.1", "15.8", "22.2", "23.4", "12", "20.3", "22", "36", "13.9", "28.1", "47", "34", "17.9", "18.9", "24.9", "38", "11.2", "24", "27", "26", "14.3", "10.2", "11.1", "32.8", "14.2", "14.1", "35", "10.5", "12.1", "42", "19", "39", "41", "40" ;
+  ns0:Tree_height_m "25", "NA", "10", "15", "35", "30", "14", "20", "8", "18", "12", "16" ;
+  ns0:Tree_N_lianas "6", "1", "7", "4", "3", "2", "5", "11", "15" ;
+  ns0:Liana_dbh_cm "4.2", "5", "3", "2.8", "2", "3.1", "7.4", "4.9", "4.3", "4.1", "3.5", "4", "5.4", "3.9", "4.8", "8.3", "4.6", "7.2", "5.6", "2.2", "5.3", "2.5", "3.6", "4.5", "3.4", "6.1", "9.1", "2.9", "5.1", "2.6", "2.3", "2.7", "6.2", "2.4", "3.2", "8.6", "11.8", "4.4", "3.7", "3.3", "6.4", "5.8", "6.5", "11.9", "5.2", "8.8", "7.6", "7.5", "3.8", "8.9", "7.7", "14.8", "7" ;
+  ns0:Tree_notes "", "Multiple stems" ;
+  ns0:Subplot_radius_m "30", "20" .
+
+ns0:Kiabau9ha
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2" ;
+  ns0:Site_plot_code "F7P1", "F7P2" ;
+  ns0:Date "22/08/2017", "22/09/2017" ;
+  ns0:Tree_individual_no "944", "977", "982", "983", "984", "985", "989", "991", "992", "994", "996", "998", "1000", "1003", "1005", "1006", "1007", "1014", "1016", "1022", "1026", "1028", "1029", "1037", "1038", "1042", "1044", "1390", "1394", "1414", "1415", "1424", "1425", "1426", "1427", "1431", "1436", "1443", "1444", "1452", "1455", "1456", "1457", "1462", "1465", "1468", "1470", "1474", "1476", "1479", "1480", "1481", "1485", "1487", "1489", "1490" ;
+  ns0:Tree_ID "Irvingia malayana", "Aporosa", "Shorea", "Dipterocarpus", "Ochanostachys amentacea", "Chisocheton", "Dipterocarpus caudiferus", "Eusideroxylon zwageri", "Scaphium", "Palaquium dasyphyllum", "Dryobalanops beccarii", "Elaeocarpus", "Shorea fallax", "Hydnocarpus", "Mallotus", "Artocarpus", "Lithocarpus gracilis", "Drypetes", "Terminalia", "Fagraea belukar", "Nauclea", "Endospermum", "Beilschmiedia", "Litsea" ;
+  ns0:Tree_dbh_cm "55", "21.5", "52", "27", "70", "50", "46.5", "13.8", "15.3", "30.5", "23.7", "33", "28.8", "14", "14.5", "11.2", "24.1", "39.3", "36.5", "37.5", "26.7", "19.2", "10.5", "18.2", "25.5", "30", "31.6", "26.9", "12.8", "26.5", "15.2", "29", "27.5", "34.5", "11", "21.8", "10.2", "12.2", "29.2", "22.2", "14.3", "16", "38.5", "16.1", "22", "26.4", "12.5", "17.2", "24.5", "20" ;
+  ns0:Tree_height_m "NA", "30", "40", "35", "13", "25", "10", "12", "14", "15", "20", "17", "22" ;
+  ns0:Tree_N_lianas "1", "3", "2", "5", "7", "4", "9", "6" ;
+  ns0:Liana_dbh_cm "2.2", "3.9", "7", "4.5", "5.6", "13", "8", "5", "3", "4.6", "2", "2.3", "2.8", "3.5", "4", "3.8", "3.3", "9.2", "5.2", "4.2", "10.5", "2.5", "8.9", "7.7", "7.3", "3.7", "10", "4.3", "2.1", "3.2", "4.1", "5.8", "11.3", "9", "6", "10.2" ;
+  ns0:Tree_notes "Sample IDed by Mike", "", "Multiple stems", "Sample IDed by Postar. S11" ;
+  ns0:Subplot_radius_m "30", "20" .
+
+ns0:DanumBRL
+  a sosa:Observation ;
+  ns0:Plot_no "3", "1", "2" ;
+  ns0:Site_plot_code "F4P3", "F4P1", "F4P2" ;
+  ns0:Date "08/10/2017", "09/07/2017" ;
+  ns0:Tree_individual_no "481", "482", "484", "485", "486", "488", "490", "496", "499", "502", "507", "510", "511", "512", "513", "514", "515", "516", "521", "528", "533", "535", "539", "540", "541", "542", "544", "545", "1497", "1498", "1501", "1505", "1507", "1508", "1509", "1519", "1521", "1524", "1525", "1526", "1531", "1532", "1534", "1536", "1537", "1547", "1551", "1557", "1558", "1560", "1564", "1566", "1576", "1578", "1581", "1583", "1585", "1588", "1590", "1594", "1596", "1599", "1601", "1602", "1604", "1605", "1616", "1621", "1624", "1626", "1627", "1631" ;
+  ns0:Tree_ID "Cleistanthus", "Aporosa", "Chisocheton sarawakensis", "Glochidion", "Shorea johorensis", "Aglaia", "Cleistanthus myrianthus", "Alangium javanicum", "Litsea", "Buchanania", "Pentace laxiflora", "Canarium denticulatum", "Dehaasia", "Barringtonia lanceolata", "Drypetes", "Aglaia silvestris", "Baccaurea", "Syzygium", "Payena acuminata", "Pentace", "Chisocheton", "Parashorea malaanonan", "Aporosa grandistipula", "Dysoxylum", "Knema", "Dimocarpus longan", "Paranephelium macrophyllum", "Shorea superba", "Knema latericia", "Shorea gibbosa", "Shorea", "Polyalthia", "Parashorea tomentella", "Dimocarpus", "Ochanostachys amentacea", "Lithocarpus gracilis", "Actinodaphne", "Octomeles sumatrana" ;
+  ns0:Tree_dbh_cm "14.3", "20", "26", "20.5", "85", "32.7", "15.5", "14.5", "29.6", "38", "28.3", "42", "36.3", "29.8", "14.2", "23.8", "11.8", "21", "27.8", "37.6", "72", "12.9", "12.4", "17.5", "29.9", "48", "31.2", "60", "19.2", "16", "14", "25", "13.9", "11.9", "10.5", "19", "20.7", "13", "15", "18", "40", "140", "70", "30", "23.6", "24.6", "21.5", "100", "26.5", "17", "28", "20.8", "23", "50", "10.6", "14.6", "35" ;
+  ns0:Tree_height_m "NA", "50", "13", "20", "15", "12", "10", "45", "35", "55", "14", "18" ;
+  ns0:Tree_N_lianas "1", "5", "3", "10", "6", "8", "4", "2", "7", "9" ;
+  ns0:Liana_dbh_cm "2.5", "4.5", "5.4", "3.7", "2.8", "4", "2", "3.2", "2.2", "3", "6.6", "3.5", "2.7", "2.1", "2.9", "2.3", "4.2", "4.6", "3.8", "2.6", "4.8", "6.5", "6.7", "5.7", "8", "6.3", "17.3", "9.6", "9.3", "7.2", "5.6", "4.9", "4.3", "4.7", "5.5", "2.4", "3.1", "3.6", "8.3", "7", "3.9", "7.9", "10.2", "4.1", "6", "8.2", "5", "8.5", "12", "6.2", "9.2", "9", "11.1", "15", "7.8", "6.4", "7.3", "5.2" ;
+  ns0:Tree_notes "" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:Kiabau25ha
+  a sosa:Observation ;
+  ns0:Plot_no "2", "3", "1" ;
+  ns0:Site_plot_code "F8P2", "F8P3", "F8P1" ;
+  ns0:Date "19/09/2017", "20/09/2017", "22/09/2017" ;
+  ns0:Tree_individual_no "1050", "1052", "1058", "1061", "1062", "1069", "1071", "1079", "1081", "1089", "1091", "1092", "1106", "1107", "1131", "1140", "1141", "1144", "1146", "1147", "1148", "1149", "1150", "1152", "1154", "1158", "1159", "1165", "1166", "1167", "1168", "1169", "1171", "1172", "1173", "1174", "1175", "1176", "1177", "1178", "1179", "1180", "1181", "1182", "1183", "1196", "1198", "1199", "1200", "1201", "1203", "1204", "1206", "1222", "1319", "1321", "1322", "1326", "1329", "1332", "1334", "1338", "1343", "1345", "1347", "1349", "1350", "1351", "1353", "1358", "1362", "1363", "1365", "1377", "1379", "1384" ;
+  ns0:Tree_ID "Shorea", "Cleistanthus", "Elaeocarpus", "Syzygium", "Dipterocarpus", "Chionanthus", "Palaquium dasyphyllum", "Canarium", "Lithocarpus", "Litsea", "Dillenia", "Gironniera subaequalis", "Durio", "Dysoxylum", "Dehaasia", "Drypetes", "Magnolia", "Lepisanthes", "Palaquium", "Macaranga", "Adinandra ", "Excoecaria philippinensis", "Glochidion", "Monoon", "Polyalthia", "Knema", "Calophyllum", "Scaphium", "Brownlowia", "Dillenia excelsa", "Hopea", "Artocarpus", "Nauclea" ;
+  ns0:Tree_dbh_cm "33", "10", "36.5", "55", "21.7", "28.7", "25.3", "11.2", "23.3", "29.4", "23", "24.6", "11", "42.8", "16", "17", "18.5", "25.1", "21", "34", "22.8", "30", "14", "12.9", "35", "17.3", "13.5", "25", "28.8", "17.1", "11.6", "18.4", "13", "29", "13.2", "18.2", "53", "48.4", "22.7", "10.5", "25.5", "29.3", "22.9", "19", "24", "12.3", "10.2", "22", "24.2", "26.3", "39", "20.8", "32", "60", "23.2", "27", "11.1", "12", "65", "13.6", "28", "15.4" ;
+  ns0:Tree_height_m "NA", "10", "20", "15", "11", "12", "7", "27", "16", "25", "18", "40", "38", "13" ;
+  ns0:Tree_N_lianas "10", "3", "4", "1", "5", "2", "11", "6", "8", "7", "15", "9" ;
+  ns0:Liana_dbh_cm "2.8", "3.3", "4.5", "3.2", "7.3", "6.5", "2", "3.4", "3.8", "6", "2.2", "2.9", "3", "5.3", "3.6", "3.1", "4", "3.5", "2.3", "4.2", "7", "2.5", "2.6", "4.7", "6.2", "5", "3.9", "4.3", "2.4", "2.1", "4.1", "5.4", "5.5", "5.9", "3.7", "5.2", "9", "10", "9.3", "4.4", "4.9", "6.3", "8", "11.1", "2.7", "5.8", "7.5", "7.8" ;
+  ns0:Tree_notes "", "Sample IDed by Postar. S2", "Sample IDed by Mike and Postar. S7 (same as S3 collected) ", "Multiple stems", "Based on S4", "Based on S7", "S10 in press. Given to FRC as sample 1. White sap." ;
+  ns0:Subplot_radius_m "30", "20" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Order>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:Order" ;
+  rdfs:comment "An order is a scientific way to categorise related organisms. An order is a smaller grouping than a class, but bigger than a family or genus. Examples of orders are willows, cockroaches and primates."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Order"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Order_%28biology%29>, <http://www.bbc.co.uk/nature/order> ;
+  ns2:term_status "testing" .
+
+ns0:HDOP
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasSimpleResult 1 ;
+  rdfs:comment "Horizontal Dilution of Precision (HDOP) measures GPS accuracy in Latitude and Longitude. The lower value the better precision." .
+
+ns0:Sabahmas89ha
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2", "3" ;
+  ns0:Site_plot_code "F2P1", "F2P2", "F2P3" ;
+  ns0:Date "29/07/2017", "31/07/2017" ;
+  ns0:Tree_individual_no "132", "133", "134", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "156", "157", "158", "159", "160", "161", "162", "163", "164", "169", "170", "171", "172", "173", "176", "179", "180", "181", "182", "190", "191", "192", "195", "196", "197", "198", "201", "203", "213", "221", "222", "224", "225", "227", "230", "233", "236", "238", "239", "240", "242", "244", "245", "249", "251" ;
+  ns0:Tree_ID "Dendrocnide", "Sloanea javanica", "Pterospermum stapfianum", "Ficus", "Pterospermum", "Diospyros", "Litsea", "Microcos", "Polyalthia", "Hydnocarpus anomala", "Ficus+Diospyros", "Barringtonia lanceolata", "Lithocarpus", "Paranephelium xestophyllum", "Ptychopyxis arborea", "Canarium denticulatum" ;
+  ns0:Tree_dbh_cm "18.3", "18.6", "14.7", "10.3", "13", "10.2", "16.2", "10.8", "24", "14.5", "12.2", "15.2", "12.7", "17", "18", "14.1", "15.5", "15.7", "14.2", "19.2", "17.3", "13.7", "20.5", "12.9", "43.3", "28.8", "20", "12.5", "16.4", "15.4", "23", "26.7", "10.5", "21.8", "71", "31.6", "46", "40.8", "49", "33.1", "28", "25", "60", "75", "80", "37", "14", "17.8" ;
+  ns0:Tree_height_m "NA", "5", "3", "6", "7", "8", "4", "33", "17", "16", "15", "25" ;
+  ns0:Tree_N_lianas "1", "3", "7", "4", "2", "5", "13", "6", "8", "11" ;
+  ns0:Liana_dbh_cm "3.7", "4.5", "2.3", "3", "2.2", "4", "5", "3.2", "2", "2.8", "2.5", "4.8", "5.6", "3.5", "5.1", "8", "4.7", "4.3", "2.9", "2.4", "4.6", "2.7", "3.6", "4.2", "2.6", "3.1", "4.4", "3.3", "3.8", "6", "5.5", "4.1", "7.5", "11", "8.9", "8.4", "10.5", "11.7", "2.1", "6.3", "6.2", "9.2", "5.8" ;
+  ns0:Tree_notes "", "Multiple stems", "Ficus completely surrounding Diospyros - dbh of both (see pic)" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:SekarImejParcel5
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2", "3" ;
+  ns0:Site_plot_code "F11P1", "F11P2", "F11P3" ;
+  ns0:Date "29/09/2017", "10/02/2017", "10/03/2017" ;
+  ns0:Tree_individual_no "2025", "2032", "2035", "2036", "2042", "2044", "2045", "2048", "2049", "2053", "2068", "2070", "2078", "2080", "2082", "2087", "2088", "2101", "2117", "2119", "2127", "2131", "2132", "2134", "2136", "2137", "2140", "2141", "2150", "2151", "2152", "2153", "2156", "2162", "2165", "2167", "2168", "2173", "2176", "2179", "2182", "2186", "2190", "2199", "2201", "2209", "2210", "2212", "2215", "2218", "2219", "2220", "2225", "2232", "2233", "2235", "2241", "2242", "2244", "2245", "2247", "2248", "2249", "2252", "2253", "2254", "2255", "2256", "2258", "2260", "2267", "2268", "2270" ;
+  ns0:Tree_ID "Cinnamomum", "Callicarpa", "Aporosa", "Gironniera", "Croton argyratus", "Dryobalanops", "Aglaia", "Palaquium", "Shorea", "Dryobalanops lanceolata", "Ficus", "Glochidion", "Diospyros", "Dehaasia", "Dryobalanops keithii", "Barringtonia lanceolata", "Macaranga gigantea", "Artocarpus", "Chisocheton", "Magnolia", "Shorea parvifolia", "Shorea acuminatissima", "Hopea", "Hydnocarpus", "Litsea", "Durio", "Barringtonia", "Myristica", "Scorodocarpus borneensis", "Dysoxylum", "Paranephelium", "Canarium", "Pternandra", "Melicope", "Lindera", "Dipterocarpus", "Syzygium", "Lithocarpus", "Shorea leprosula", "Terminalia", "Lophopetalum", "Actinodaphne", "Alstonia" ;
+  ns0:Tree_dbh_cm "31.5", "21", "16.4", "18.8", "27.5", "23.9", "11", "11.3", "40.1", "16.7", "14.7", "14.4", "14.5", "16.6", "36.6", "20.1", "10.6", "12.3", "30.8", "65", "15.6", "25.1", "16.5", "16.8", "21.6", "24.6", "17.9", "36.5", "70", "33", "26.6", "15.9", "20.6", "42.4", "40.7", "56", "57", "10.7", "12.2", "17.8", "29.9", "23.3", "40.9", "34.6", "26.8", "27.1", "14.9", "24.3", "22.2", "35.4", "33.3", "30.1", "32.3", "14.1", "40.4", "19.4", "13.4", "50", "11.4", "22.6", "23.1", "40", "30.4", "24.2", "24.1", "16.2" ;
+  ns0:Tree_height_m "15", "NA", "20", "10", "22", "35", "13", "14", "30", "25", "8", "18" ;
+  ns0:Tree_N_lianas "4", "8", "2", "3", "5", "9", "1", "10", "7", "20", "6", "16" ;
+  ns0:Liana_dbh_cm "4.1", "4.5", "3.2", "3.5", "4", "2", "5", "2.5", "3", "12", "2.8", "2.9", "6", "7.5", "5.9", "2.3", "4.3", "6.4", "5.1", "3.3", "3.9", "7.9", "2.2", "4.9", "4.7", "5.2", "6.5", "4.2", "3.7", "3.8", "4.4", "2.7", "5.8", "2.6", "6.2", "6.7", "7.4", "8.6", "3.4", "2.1", "3.6", "3.1", "2.4", "18.4", "6.1", "7.2", "10", "8", "5.5", "6.6", "8.8", "5.7", "8.4", "9.9", "6.3", "5.6", "8.9", "4.6", "5.4", "4.8", "5.3", "6.8" ;
+  ns0:Tree_notes "", "Based on S13", "Multiple stems" ;
+  ns0:Subplot_radius_m "30", "20" .
+
+ns0:elephant#Seri
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Seri, here, the GPS collar (sensor) is named after her." .
+
+ns0:elephant#Aqeela
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:LocalDate, ns0:LocalTime, ns0:Cov, ns0:Direction, ns0:Distance, ns0:HDOP, ns0:PDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "", "A female asian elephant called  Aqeela, here, the GPS collar (sensor) is named after her." .
+
+ns0:elephant#Bikang1
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Bikang1, here, the GPS collar (sensor) is named after her." .
+
+ns0:Ribubonus
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2" ;
+  ns0:Site_plot_code "F9P1", "F9P2" ;
+  ns0:Date "25/09/2017" ;
+  ns0:Tree_individual_no "1636", "1652", "1657", "1658", "1663", "1664", "1666", "1667", "1668", "1669", "1670", "1672", "1675", "1676", "1677", "1678", "1679", "1680", "1681", "1684", "1686", "1688", "1693", "1696", "1704", "1708", "1709", "1714", "1717", "1719", "1720", "1721", "1722", "1723", "1724", "1727", "1729", "1731", "1734", "1735", "1736", "1737" ;
+  ns0:Tree_ID "Rinorea anguifera", "Hopea sangal", "Clausena excavate", "Croton argyratus", "Paranephelium", "Eusideroxylon zwageri", "Ficus", "Callicarpa", "Fordia", "Mallotus wrayi", "Nauclea", "Ryparosa acuminata", "Glochidion", "Melicope", "Syzygium", "Macaranga pearsonii", "Macaranga" ;
+  ns0:Tree_dbh_cm "11.9", "12.2", "19.6", "25.2", "25", "14.4", "10.7", "29", "11.2", "26.5", "12", "12.7", "50", "18", "53", "10", "17", "13", "15", "17.3", "38", "25.4", "21.2", "19.8", "34.4", "35.5", "34.1", "27.4", "43.2", "70", "32.5", "18.8", "36", "23.6" ;
+  ns0:Tree_height_m "NA", "10", "15", "9", "13", "12", "20" ;
+  ns0:Tree_N_lianas "2", "4", "6", "5", "1", "3", "7" ;
+  ns0:Liana_dbh_cm "3", "2", "2.5", "2.7", "5", "2.6", "3.5", "4", "5.5", "2.4", "4.2", "4.5", "2.3", "3.2", "2.2", "3.3", "2.1", "6.2", "5.7", "6", "4.3" ;
+  ns0:Tree_notes "Based on S14", "", "Multiple stems. Based on S13", "Multiple stems", "Based on S13", "Amat took picture for ID to species", "Has a hollow so not commercially valuable" ;
+  ns0:Subplot_radius_m "20", "30" .
+
+ns0:hasHDOP
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:integer .
+
+ns0:DanumW15
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2", "3" ;
+  ns0:Site_plot_code "F1P1", "F1P2", "F1P3" ;
+  ns0:Date "21/07/2017", "22/07/2017", "23/07/2017" ;
+  ns0:Tree_individual_no "2", "3", "5", "7", "9", "11", "18", "19", "17", "21", "22", "24", "27", "28", "29", "31", "32", "34", "35", "37", "40", "41", "43", "45", "47", "49", "57", "58", "65", "66", "67", "72", "74", "85", "99", "102", "116", "128", "129" ;
+  ns0:Tree_ID "Shorea pauciflora", "Syzygium", "Pternandra", "Shorea argentifolia", "Shorea fallax", "Shorea johorensis", "Garcinia", "Diospyros", "Aglaia", "Dehaasia", "Allophylus cobbe", "Meliosma sumatrana", "Parashorea tomentella", "Lansium domesticum", "Vatica sarawakensis", "Canarium denticulatum", "Litsea grandis", "Shorea parvifolia", "Lithocarpus", "Mallotus wrayi", "Aporosa elmeri", "Dysoxylum alliaceum", "Shorea", "Litsea" ;
+  ns0:Tree_dbh_cm "110", "40.5", "62.7", "16.7", "34", "23.7", "105", "14.9", "17", "24.5", "39", "36", "37.5", "65", "34.2", "32", "13", "13.6", "29", "43", "60", "28", "52", "24", "55.5", "10.9", "14.3", "47.5", "105.5", "75", "15.6", "115", "44", "16", "55", "25.5" ;
+  ns0:Tree_height_m "60", "NA", "10", "15", "12", "22", "16", "57", "20" ;
+  ns0:Tree_N_lianas "3", "1", "2", "8", "5", "6", "12" ;
+  ns0:Liana_dbh_cm "10", "9", "9.8", "3.4", "2.9", "5.2", "5.4", "2.3", "4", "7", "6.8", "2.6", "3.1", "4.9", "6.2", "18", "7.5", "12", "2.2", "4.5", "8.3", "7.8", "10.3", "3.8", "4.8", "5.6", "3.2", "3.5", "5.8", "5.3", "10.8", "6", "5.9", "2.4", "5.5", "5.7", "8.2", "2.5", "4.2", "5.1", "2", "3", "11.2", "2.8", "11.7", "16", "2.7", "12.2", "8", "12.8" ;
+  ns0:Tree_notes "" ;
+  ns0:Subplot_radius_m "30", "20" .
+
+ns0:SekarImej600ha
+  a sosa:Observation ;
+  ns0:Plot_no "3", "2", "1" ;
+  ns0:Site_plot_code "F10P3", "F10P2", "F10P1" ;
+  ns0:Date "28/09/2017", "30/09/2017" ;
+  ns0:Tree_individual_no "1743", "1754", "1755", "1756", "1758", "1760", "1761", "1762", "1763", "1770", "1772", "1773", "1776", "1777", "1778", "1779", "1783", "1788", "1791", "1803", "1820", "1823", "1829", "1832", "1835", "1854", "1855", "1858", "1860", "1868", "1872", "1873", "1880", "1888", "1889", "1892", "1925", "1949", "1964", "1969", "1986", "1994", "1998", "2000", "2014" ;
+  ns0:Tree_ID "Syzygium", "Moultonianthus leembruggianus", "Mallotus", "Hopea", "Palaquium", "Drypetes", "Diospyros", "Gironniera", "Dryobalanops lanceolata", "Dysoxylum", "Lophopetalum", "Artocarpus", "Durio", "Paraserianthes falcataria", "Lithocarpus", "Shorea", "Archidendron ellipticum", "Hydnocarpus", "Dryobalanops keithii", "Shorea fallax", "Glochidion", "Macaranga pearsonii", "Scaphium", "Dryobalanops beccarii", "Calophyllum", "Cinnamomum" ;
+  ns0:Tree_dbh_cm "27", "15", "13", "60", "20.4", "10.6", "20", "15.5", "36", "40.1", "13.7", "24", "37", "25.4", "18", "29", "22", "40.5", "31.5", "42", "32.6", "30.4", "17.9", "27.7", "25.6", "30.9", "21.4", "38", "40", "20.1", "20.3", "39.7", "29.9", "25.3", "26.2", "25.2", "16.9", "29.1" ;
+  ns0:Tree_height_m "15", "NA", "27", "33", "13", "35", "20", "12", "10", "25", "22", "23" ;
+  ns0:Tree_N_lianas "3", "1", "5", "8", "2", "6", "4" ;
+  ns0:Liana_dbh_cm "2.3", "2.6", "4.3", "2.4", "2", "3", "4.8", "6", "2.9", "2.1", "2.5", "4", "3.5", "2.2", "7", "6.4", "6.5", "3.2", "8.3", "12", "4.5", "5.7", "4.4", "6.2", "8.9", "5.1", "5.8", "21.8", "6.9", "10.5", "5.3", "7.9", "4.2", "8", "6.6", "7.1", "4.1", "5.4", "9.5", "4.9", "4.6", "3.1", "8.2", "5", "3.9" ;
+  ns0:Tree_notes "" ;
+  ns0:Subplot_radius_m "30", "20" .
+
+ns0:hasTree_ID
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+geo:alt
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Point ;
+  rdfs:range [
+    a owl:Restriction ;
+    owl:onProperty ns0:hasValue ;
+    owl:someValuesFrom rdfs:Literal
+  ] .
+
+ns0:Site_plot_code
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasSite_plot_code 3 ;
+  skos:definition "code for the study site and plot at the site, in the format FaPb (where a refers to site code, and can be 1-18; and b refers to plot code, and can be 1-3)" .
+
+ns0:make
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasMake "Reckno" ;
+  skos:definition "The make of the trail camera used to capture the image" .
+
+ns0:localTime
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime ;
+  skos:definition "The current local time in Sabah, Malaysia when the image collects its readings." .
+
+ns0:Soil_Sensor
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:hasFeatureOfInterest ns0:Soil ;
+  sosa:observedProperty ns0:C:P, ns0:Bulk_Density, ns0:Horizon, ns0:Horizon_Depth, ns0:Land_Use, ns0:Plot_Name, ns0:Site, ns0:Soil_Moisture, ns0:Soil_pH, ns0:Subplot, ns0:inorganic_P, ns0:total_C, ns0:total_N, ns0:C:N ;
+  rdfs:comment """Soil sensor data consist of soil properties tropical forests in Sabah, Malaysia. 
+The data is a contribution from the BALI collaboration, which is financed by the UK's Natural Environment Research Council (NERC).""" .
+
+sosa:Observation
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "sosa:Observation" ;
+  rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+  rdfs:isDefinedBy sosa: ;
+  rdfs:label "Observation"@en ;
+  skos:definition "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+  skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
+
+ns0:elephant#Kasih
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Kasih, here, the GPS collar (sensor) is named after her." .
+
+ns0:Subplot
+  a owl:NamedIndividual ;
+  ns0:hasSubplot "subplot" ;
+  skos:definition "Number of the subplot sampled within each 1 Ha plot Numeric" .
+
+ns0:elephant#Ita
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Ita, here, the GPS collar (sensor) is named after her." .
+
+sosa:ObservableProperty
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "sosa:ObservableProperty" ;
+  rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+  rdfs:isDefinedBy sosa: ;
+  rdfs:label "Observable Property"@en ;
+  skos:definition "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+  skos:example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+
+ns0:hasHorizon
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+schema:domainIncludes a owl:AnnotationProperty .
+ns0:Bulk_Density
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasValue "0.6"^^xsd:float ;
+  skos:definition "Measured Bulk Density of soil sample" .
+
+ns0:elephant#Sejati
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A male asian elephant called Sejati, here, the GPS collar (sensor) is named after him." .
+
+ns0:elephant#Liun
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:DateTime, ns0:Direction, ns0:PDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Liun, here, the GPS collar (sensor) is named after her." .
+
+ns0:elephant#Kuma
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A male asian elephant called Kuma, here, the GPS collar (sensor) is named after him." .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Species>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:Species" ;
+  rdfs:comment "Generic class defining a biological species"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "species"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Species>, <http://www.bbc.co.uk/nature/species> ;
+  ns2:term_status "testing" .
+
+ns0:
+  a owl:Ontology ;
+  owl:versionIRI ns0: ;
+  dc11:abstract "The Forest Observatory Ontology (FOO) comprises a novel upper-level ontology that integrates wildlife data generated by sensors."@en ;
+  dc11:description "This ontology describes wildlife observations generated by sensors."@en ;
+  dc11:title "Forest Observatory Ontology (FOO) Ontology"@en ;
+  dc:created "February 1st, 2023"@en ;
+  dc:creator "Naeima Hamed"@en ;
+  dc:license <http://creativecommons.org/licenses/by-sa/4.0/> ;
+  ns3:preferredNamespacePrefix "foo"@en ;
+  ns3:preferredNamespaceUri "https://w3id.org/def/foo#" ;
+  schema:citation "Cite this vocabulary as: Hamed, N., Forest Observatory Ontology (FOO) Ontology"@en .
+
+ns0:RekaHalus52ha
+  a sosa:Observation ;
+  ns0:Plot_no "1", "2", "3" ;
+  ns0:Site_plot_code "F5P1", "F5P2", "F5P3" ;
+  ns0:Date "14/08/2017", "15/08/2017" ;
+  ns0:Tree_individual_no "570", "591", "597", "606", "615", "619", "630", "633", "655", "661", "674", "678", "692", "694", "698", "709", "712", "719", "722", "728", "729", "736", "738", "741", "745", "754", "780", "782", "793", "795", "800", "803", "808", "814", "815", "818", "819", "820" ;
+  ns0:Tree_ID "Shorea", "Croton", "Dehaasia", "Dryobalanops beccarii", "Lithocarpus", "Semecarpus glaucas", "Scaphium macropodum", "Glaucidium", "Neonauclea", "Ficus", "Shorea macroptera", "Walsura pinnata", "Vatica", "Hopea nervosa", "Barringtonia", "Chisocheton sarawakensis" ;
+  ns0:Tree_dbh_cm "26.2", "58.5", "14", "16.2", "27", "37", "32", "40", "27.5", "21.8", "23.5", "37.8", "16.5", "22", "10.3", "15", "18.3", "38", "12", "30", "21.9", "10.5", "17.5", "39.1", "18.5", "65", "45", "20.5", "32.4", "18", "35", "10", "16", "10.8" ;
+  ns0:Tree_height_m "NA", "30", "16", "18", "22", "17", "15", "12" ;
+  ns0:Tree_N_lianas "2", "1", "3", "6", "4", "5" ;
+  ns0:Liana_dbh_cm "4", "3", "12.4", "4.5", "2", "15", "8.2", "2.2", "2.7", "5", "3.2", "10", "3.1", "4.2", "6", "4.6", "2.3", "5.7", "7", "7.6", "3.3", "3.4", "3.8", "5.6", "6.8", "5.2", "8.4", "4.3", "2.6", "3.9", "16", "8", "6.5", "2.5", "9", "5.5", "2.4" ;
+  ns0:Tree_notes "", "Multiple stems" ;
+  ns0:Subplot_radius_m "30", "20" .
+
+ns0:CameraTrap
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:hasFeatureOfInterest ns0:image ;
+  sosa:observedProperty ns0:Name, ns0:Path, ns0:localDate, ns0:localTime, ns0:make, ns0:model ;
+  ns0:hasMake "\"make\"" ;
+  ns0:hasModel "model" ;
+  ns0:hasPath "dfgcimage.org"^^xsd:anyURI ;
+  sosa:hasResult "Image" ;
+  rdfs:comment "Wildlife cameras with embeded sensors to capture moving objects." .
+
+ns0:ElephasMaximus a owl:NamedIndividual, sosa:FeatureOfInterest .
+geo:lat
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Point ;
+  rdfs:range [
+    a owl:Restriction ;
+    owl:onProperty ns0:hasValue ;
+    owl:someValuesFrom rdfs:Literal
+  ] .
+
+ns0:elephant#Merotai
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A male asian elephant called Merotai, here, the GPS collar (sensor) is named after him." .
+
+ns0:Replanting_nearest_OP
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasReplanting_nearest_OP "2008" ;
+  skos:definition "Year of any replanting of oil palm adjacent to the forest site (fragmented sites where adjacent oil palm had undergone a second round of planting)" .
+
+ns0:total_N
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasTotal_N "23.65"^^xsd:float ;
+  skos:definition "total nitrogen content of the soil sample" .
+
+ns0:hasYears_since_frag
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#order>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom> ;
+  rdfs:comment "associates a taxon rank with an order"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "order"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:GMTTime
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime ;
+  rdfs:comment "The current local date in Sabah, Malaysia when the image collects its readings." .
+
+ns0:elephant#Maliau
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A male asian elephant called Maliau, here, the GPS collar (sensor) is named after him." .
+
+ns0:hasCount
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:integer .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#FreshwaterHabitat>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Habitat> ;
+  ns1:prefixIRI "wo:FreshwaterHabitat" ;
+  rdfs:comment "Freshwater habitats include bogs, ponds, lakes, rivers and streams. About 3% of Earth's water is freshwater, but this includes the water locked up in the ice caps and trapped in rocks and soil as groundwater. Only a tiny fraction (0.014%) is surface water in the form of rivers, lakes and swamps." ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Freshwater Habitat"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:hasSpeed
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#species>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Species> ;
+  rdfs:comment "associates a taxon rank with a species"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "species"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:Source_of_dates
+  a owl:DatatypeProperty, owl:NamedIndividual, sosa:ObservableProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string ;
+  ns0:Source_of_dates "string" ;
+  skos:definition "source of \"First_planting_nearest_OP\"" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#MarineHabitat>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Habitat> ;
+  ns1:prefixIRI "wo:MarineHabitat" ;
+  rdfs:comment "Approximately 71% of the Earth's surface is covered by the oceans, an area of some 223698816km/sq. Although marine life evolved around three billion years before life on land, marine habitats are relatively poorly studied and much of the ocean's depths remains unexplored." ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Marine Habitat"@en-gb ;
+  ns2:term_status "testing" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#phylum>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum> ;
+  rdfs:comment "associates a taxon rank with a phylum"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "phylum"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:elephant#Dara
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Dara, here, the GPS collar (sensor) is named after her." .
+
+ns0:elephant#ABAW
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Cov, ns0:ExtTemp, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  sosa:hasResult "" ;
+  rdfs:comment "A female asian elephant called  Abaw, here, the GPS collar (sensor) is named after her." .
+
+foaf:Image
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+ns0:elephant#Bikang2
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Bikang2, here, the GPS collar (sensor) is named after her." .
+
+ns0:elephant#Guli
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A male asian elephant called Guli, here, the GPS collar (sensor) is named after him." .
+
+ns0:Years_since_frag
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasYears_since_frag "2017" ;
+  skos:definition "Years since fragmentation at time of data collection. i.e., 2017 \"First_planting_nearest_OP\" (fragmented sites only)" .
+
+ns0:DGFC_ID
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasResult "ID" ;
+  skos:definition "An identifier that is unique for GPS collar sensor observation" .
+
+sosa:FeatureOfInterest
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "sosa:FeatureOfInterest" ;
+  rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+  rdfs:isDefinedBy sosa: ;
+  rdfs:label "Feature Of Interest"@en ;
+  skos:definition "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+  skos:example "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
+
+ns0:Site_code
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasSimpleResult 18 ;
+  skos:definition "code for the study site, in the format Fa (where a can be 1-18)" .
+
+ns0:DanumW16
+  a sosa:Observation ;
+  ns0:Plot_no "3" ;
+  ns0:Site_plot_code "F1P3" ;
+  ns0:Date "23/07/2017" ;
+  ns0:Tree_individual_no "45" ;
+  ns0:Tree_ID "Lithocarpus" ;
+  ns0:Tree_dbh_cm "36" ;
+  ns0:Tree_height_m "NA" ;
+  ns0:Tree_N_lianas "2" ;
+  ns0:Liana_dbh_cm "7.6" ;
+  ns0:Tree_notes "" ;
+  ns0:Subplot_radius_m "30" .
+
+dc:isPartOf
+  dc:description "This property is intended to be used with non-literal values. This property is an inverse property of Has Part."@en ;
+  rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "Is Part Of"@en .
+
+ns0:Count
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasCount 1 ;
+  rdfs:comment "GPS collar dataset's observation count per dataset" .
+
+dc:Policy
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  owl:disjointWith dc:ProvenanceStatement ;
+  ns1:prefixIRI "terms:Policy" ;
+  rdfs:comment "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "Policy"@en .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Class>
+  a owl:Class ;
+  owl:equivalentClass <https://www.bbc.co.uk/ontologies/wildlife-ontology#Family> ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:Class" ;
+  rdfs:comment "A class is a scientific way to group related organisms together, some examples of classes being jellyfish, reptiles and sea urchins. Classes are big groups and contain within them smaller groupings called orders, families, genera and species."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Class"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Class_%28biology%29>, <http://www.bbc.co.uk/nature/class> ;
+  ns2:term_status "testing" .
+
+dc:title
+  a owl:AnnotationProperty ;
+  dc:title "Forest Observatory Ontology (FOO)" .
+
+ns0:Identifier
+  a owl:NamedIndividual, sosa:ObservableProperty, sosa:Observation ;
+  sosa:hasFeatureOfInterest ns0:image ;
+  sosa:hasResult "DGFC_" ;
+  skos:definition "Unique Soil Sample Identifier" .
+
+ns0:hasTree_dbh_cm
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "wo:TaxonRank" ;
+  rdfs:comment "Generic concept for a taxonomic rank such as a Genus or Species."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Taxonomic Rank"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Taxonomic_rank> ;
+  ns2:term_status "testing" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#habitat>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Habitat> ;
+  rdfs:comment "associates a taxon rank with a habitat in which it may typically be found"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "habitat"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:LocalDate
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:resultTime "2005-11-12T12:05:05"^^xsd:dateTime .
+
+ns0:inorganic_P
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasSimpleResult "36.65"^^xsd:float ;
+  skos:definition "inorganic/soluble phosphorus concentration of the soil sample" .
+
+dc:Frequency
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "terms:Frequency" ;
+  rdfs:comment "A rate at which something recurs."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "Frequency"@en .
+
+ns0:elephant#Jasper
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A male asian elephant called Jasper here, the GPS collar (sensor) is named after him." .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  owl:disjointWith <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:TaxonName" ;
+  rdfs:comment "A taxonomic name, describing the structure and provenance of a taxonomic name."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Taxon Name"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:ID
+  a owl:NamedIndividual, sosa:Observation ;
+  sosa:hasResult "\"foo_\"" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#kingdom>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom> ;
+  rdfs:comment "associates a taxon rank with a kingdom"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "kingdom"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:hasSubplot
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range rdfs:Literal .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Civettictis>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName> .
+
+foaf:based_near
+  a owl:ObjectProperty ;
+  rdfs:domain geo:SpatialThing ;
+  rdfs:range sosa:FeatureOfInterest ;
+  rdfs:comment "A location that something is based near, for some broadly human notion of near." ;
+  rdfs:isDefinedBy foaf: ;
+  rdfs:label "based near" ;
+  ns2:term_status "testing" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Family>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:Family" ;
+  rdfs:comment "A family is a scientific grouping of closely related organisms. It has smaller groups, called genera and species, within it. A family can have a lot of members or only a few. Examples of families include the cats (Felidae), the gulls (Laridae) and the grasses (Poaceae)."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Family"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Family_%28biology%29>, <http://www.bbc.co.uk/nature/family> ;
+  ns2:term_status "testing" .
+
+ns0:Otter
+  a owl:NamedIndividual, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Carnivora>, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata> ;
+  rdfs:comment "Otter is a carnivorous mammal." .
+
+sosa:resultTime
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range xsd:dateTime .
+
+ns0:hasPlot_Name
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+ns0:elephant#Jasmin
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Jasmin, here, the GPS collar (sensor) is named after her." .
+
+sosa:isObservedBy
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:Sensor ;
+  rdfs:range sosa:ObservableProperty .
+
+ns0:hasModel
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+sosa:madeBySensor
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:Sensor ;
+  rdfs:range sosa:Observation .
+
+ns0:Survey_date
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasLocalDate "" ;
+  skos:definition "date of field data collection at the plot, in the plot, in the format dd/mm/yyyy. Note that in some cases measurements were taken on more than one date for a single plot; see the dates provided in the seperate vegetation datasets for the precise date of particular vegetation data collection." .
+
+ns0:hasC:N
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:model
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasModel "\"model\"" ;
+  skos:definition "The model of the trail camera used to capture the image" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#livesIn>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Habitat> ;
+  rdfs:comment "associates a taxon rank with a habitat in which it lives. Sub-property of wo:habitat to be used for members of the animal kingdom"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "lives in"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:hasSite_plot_code
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range rdfs:Literal .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#TerrestrialHabitat>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Habitat> ;
+  ns1:prefixIRI "wo:TerrestrialHabitat" ;
+  rdfs:comment "Terrestrial habitats include forests, grasslands, deserts and rainforests. They are typically defined by factors such as plant structure (trees and grasses), leaf types (eg broadleaf and needleleaf), plant spacing (forest, woodland, savanna) and climate." ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Terrestrial Habitat"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:PDOP
+  a owl:DatatypeProperty, owl:NamedIndividual, sosa:ObservableProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:integer ;
+  ns0:PDOP 3 ;
+  rdfs:comment "Positional Dilution of Precision (DDOP) describes the error caused by the relative position of the GPS satellites. The more signals a GPS reciever can \"see\" (speard vs near each other), the more precise it can be." .
+
+ns0:hasTotal_P
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:Direction
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasDirection "0.4"^^xsd:float ;
+  rdfs:comment "Direction that the elephant is travelling at the current data collection instant." .
+
+sosa:Sensor
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "sosa:Sensor" ;
+  rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+  rdfs:isDefinedBy sosa: ;
+  rdfs:label "Sensor"@en ;
+  skos:definition "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+  skos:example "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Elephantidae>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Family> ;
+  rdfs:comment """ELEPHANTIDAE is a family of bulky mammals (order Proboscidea) comprising the recent elephants and related extinct forms.
+Source: https://www.merriam-webster.com/dictionary/Elephantidae""" .
+
+geo:Point
+  a owl:Class, owl:NamedIndividual ;
+  rdfs:subClassOf geo:SpatialThing ;
+  ns1:prefixIRI "wgs84_pos:Point" ;
+  ns4:relativeLocation "" ;
+  rdfs:comment """ 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  """, """A point, typically described using a coordinate system relative to Earth, such as WGS84.
+  """ ;
+  rdfs:label "point" .
+
+geo:SpatialThing
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "wgs84_pos:SpatialThing" ;
+  rdfs:comment """Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+""" ;
+  rdfs:label "Spatial Thing", "SpatialThing" .
+
+ns0:hasClay
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:Phylum" ;
+  rdfs:comment "A phylum - also known as a division when referring to plants - is a scientfic way of grouping together related organisms. All the members of a phylum have a common ancestor and anatomical similarities. For instance, all the arthropods have external skeletons. Phlya are large groups and are further subdivided into classes, orders, families and so on."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Phylum"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Phylum>, <http://www.bbc.co.uk/nature/phylum> ;
+  ns2:term_status "testing" .
+
+ns0:Cov
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasCov 1 ;
+  rdfs:comment "GPS collar dataset: satellite coverage, the higher number the stronger coverage." .
+
+ns0:hasValue
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range rdfs:Literal .
+
+dc:PhysicalResource
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "terms:PhysicalResource" ;
+  rdfs:comment "A material thing."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "Physical Resource"@en .
+
+ns0:hasTree_height_m
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Viverridae>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Family> ;
+  rdfs:isDefinedBy "Viverridae is a family of small to medium-sized, feliform mammals. The viverrids comprise 33 species placed in 14 genera. This family was named and first described by John Edward Gray in 1821. Viverrids occur all over Africa, southern Europe, and South and Southeast Asia, across the Wallace Line", "https://en.wikipedia.org/wiki/Viverridae" .
+
+ns0:hasReplanting_nearest_OP
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+ns0:elephant#Tunglap
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Tunglap, here, the GPS collar (sensor) is named after her." .
+
+ns0:image
+  a owl:NamedIndividual, sosa:FeatureOfInterest, foaf:Image ;
+  sosa:isFeatureOfInterestOf ns0:Identifier .
+
+ns0:Land_Use
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasLand_Use "plants" ;
+  sosa:hasSimpleResult "Unlogged" ;
+  skos:definition "Land use of the study plots: Unlogged tropical forest, Logged tropical forest or Oil palm plantation" .
+
+dc:license
+  a owl:AnnotationProperty ;
+  dc:license <https://creativecommons.org/licenses/by-sa/4.0/> .
+
+ns0:Civets a owl:NamedIndividual, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Viverridae>, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Carnivora>, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata> .
+ns0:hasLiana_dbh_cm
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:Site_name
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasSite_name "Sabahmas" ;
+  skos:definition "name of the study site" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:Kingdom" ;
+  rdfs:comment "Kingdoms are the major categories into which scientists divide up all living things. The main kingdoms are animals, plants, fungi and bacteria, although there are others. Each kingdom has its own suite of defining characteristics - for instance plants have rigid cell walls, whilst animals do not."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Kingdom"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Kingdom_%28biology%29>, <http://www.bbc.co.uk/nature/kingdom> ;
+  ns2:term_status "testing" .
+
+ns2:term_status a owl:AnnotationProperty .
+ns0:hasDisturbance
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+ns0:Soil
+  a owl:NamedIndividual, sosa:FeatureOfInterest ;
+  rdfs:comment "Soil or dirt, is a mixture of organic matters, minerals, ases, liquids, and organisms that collectively support life." .
+
+ns0:hasPath
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:anyURI .
+
+ns0:C:N
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:C:N "11.9"^^xsd:float ;
+  skos:definition "carbon to nitrogen ratio of the soil sample" .
+
+ns0:hasDistance
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+sosa:hasResult
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range rdfs:Literal .
+
+ns0:hasTemp
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:double .
+
+ns0:GMTDate
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime ;
+  skos:definition "The GMT date in Sabah, Malaysia when the GPS collar collected  its readings." .
+
+ns0:hasLocalDate
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+skos:example a owl:AnnotationProperty .
+ns0:hasName
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+sosa:madeObservation
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range sosa:Sensor .
+
+ns0:First_planting_nearest_OP
+  a owl:NamedIndividual ;
+  ns0:hasFirst_planning_nearest_OP "2005" ;
+  skos:definition "Year palm adjacent to the forest site" .
+
+ns0:Loxodonta
+  a owl:NamedIndividual, sosa:FeatureOfInterest ;
+  rdfs:comment "African elephant" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Loxodonta>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName> .
+
+ns0:hasSubplot_radius_m
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:elephant#Umas2
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A male asian elephant called Umas2, here, the GPS collar (sensor) is named after him." .
+
+sosa:hasSimpleResult
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range rdfs:Literal .
+
+ns0:Plot_Name
+  a owl:NamedIndividual ;
+  ns0:hasPlot_Name "NAME" ;
+  skos:definition "Name of the 1 Ha plot sampled" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Reptilia>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Class> ;
+  rdfs:comment "Reptilia is a vertebrate animal of a class that includes snakes, lizards, crocodiles, turtles, and tortoises. They are distinguished by having a dry scaly skin and typically laying soft-shelled eggs on land." .
+
+ns0:Soil_identifier
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasResult "\" \"" ;
+  rdfs:comment "Unique observation identifier, collected over a set time interval." .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Habitat>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "wo:Habitat" ;
+  rdfs:comment "A habitat, or biome, is the type of environment in which plant and animals live. Habitat is dictated by what kinds of plants grow there, the climate and the geography. Rainforest, coral reefs and the tundra are all habitats where particular kinds of plants and animals might be found."@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Habitat"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Habitat>, <http://www.bbc.co.uk/nature/habitats> ;
+  ns2:term_status "testing" .
+
+dc:LicenseDocument
+  a owl:Class ;
+  ns1:prefixIRI "terms:LicenseDocument" ;
+  rdfs:comment "A legal document giving official permission to do something with a resource."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "License Document"@en .
+
+ns0:hasSite_name
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+ns0:hasTree_individual_no
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:integer .
+
+ns0:Horizon_Depth
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasSimpleResult "2.5"^^xsd:float ;
+  skos:definition "Depth of the organic soil horizon sampled" .
+
+ns0:C:P
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+sosa:hasFeatureOfInterest
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range sosa:FeatureOfInterest .
+
+ns0:Long
+  a owl:NamedIndividual, geo:Point ;
+  rdfs:comment "The geographical longitude of a sensor observation location" .
+
+ns0:Vegetation a owl:NamedIndividual, sosa:FeatureOfInterest .
+ns0:hasFirst_planning_nearest_OP
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum> ;
+  rdfs:comment """A large phylum of animals that includes the vertebrates together with the sea squirts and lancelets. They are distinguished by the possession of a notochord at some stage during their development.
+Source: google.com""" .
+
+geo:
+  rdfs:comment """
+Recent changes to this namespace:
+$Log: wgs84_pos.rdf,v $
+Revision 1.22  2009/04/20 15:00:30  timbl
+Remove the time bits which have been deal with elsewhere eg in iCal.
+
+Revision 1.21  2009/04/20 12:52:47  timbl
+try again
+
+Revision 1.20  2009/04/20 12:42:11  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.19  2009/04/20 12:36:31  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.18  2006/02/01 22:01:04  danbri
+Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid
+
+Revision 1.17  2004/02/06 17:38:12  danbri
+Fixed a bad commit screwup
+
+Revision 1.15  2003/04/19 11:24:08  danbri
+Fixed the typo even more.
+
+Revision 1.14  2003/04/19 11:16:56  danbri
+fixed a typo
+
+Revision 1.13  2003/02/19 22:27:27  connolly
+relaxed domain constraints on lat/long/alt from Point to SpatialThing
+
+Revision 1.12  2003/01/12 01:41:41  danbri
+Trying local copy of XSLT doc.
+
+Revision 1.11  2003/01/12 01:20:18  danbri
+added a link to morten's xslt rdfs viewer.
+
+Revision 1.10  2003/01/11 18:56:49  danbri
+Removed datatype range from lat and long properties, since they would
+have required each occurance of the property to mention the datatype.
+
+Revision 1.9  2003/01/11 11:41:31  danbri
+Another typo; repaired rdfs:Property to rdf:Property x4
+
+Revision 1.8  2003/01/11 11:05:02  danbri
+Added an rdfs:range for each lat/long/alt property,
+http://www.w3.org/2001/XMLSchema#float
+
+Revision 1.7  2003/01/10 20:25:16  danbri
+Longer rdfs:comment for Point, trying to be Earth-centric and neutral about
+coordinate system(s) at the same time. Feedback welcomed.
+
+Revision 1.6  2003/01/10 20:18:30  danbri
+Added CVS log comments into the RDF/XML as an rdfs:comment property of the
+vocabulary. Note that this is not common practice (but seems both harmless
+and potentially useful).
+
+
+revision 1.5
+date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5
+Updated schema:
+Added a dc:date, added url for more info. Changed the rdfs:label of the
+namespace from gp to geo. Added a class Point, set as the rdfs:domain of
+each property. Added XML comment on the lat_long property suggesting that
+we might not need it (based on #rdfig commentary from implementors).
+
+revision 1.4
+date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5
+Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in
+#rdfig for catching this error.
+
+revision 1.3
+date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3
+fixed buglet in vocab, added more wgs links
+
+revision 1.2
+date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4
+Removed alt from the as-a-flat-string property, and switched from
+space separated to comma separated.
+
+revision 1.1
+date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
+basic geo vocab
+
+""" ;
+  rdfs:label "geo" .
+
+sosa:Platform
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "sosa:Platform" ;
+  rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.\"@en ;" ;
+  rdfs:isDefinedBy "sosa" ;
+  skos:definition "\"A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.\"@en ;" ;
+  skos:example "\"A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators.\"@en ;" .
+
+ns0:hasSoil_pH
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+sosa:hosts
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:Platform ;
+  rdfs:range sosa:Sensor ;
+  owl:propertyDisjointWith sosa:observes .
+
+ns0:elephant#Sandi
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Sandi, here, the GPS collar (sensor) is named after her." .
+
+ns0:Speed
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasSpeed "35.5"^^xsd:float ;
+  rdfs:comment "Speed of the elephant at current data collection instant." .
+
+ns0:localDate
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:resultTime "2014-04-12T13:20:00-05:00"^^xsd:dateTime ;
+  skos:definition "The current local date in Sabah, Malaysia when the image collects its readings." .
+
+ns0:hasTotal_C
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:LocalTime
+  a owl:NamedIndividual ;
+  sosa:resultTime "2005-11-12T12:05:05"^^xsd:dateTime .
+
+ns0:hasMake
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+owl:Thing ns1:prefixIRI "owl:Thing" .
+ns0:Distance
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasDistance "1.2"^^xsd:float ;
+  rdfs:comment "Distance (m) travelled from the previous data collection instant to the present." .
+
+ns0:hasTotal_N
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+sosa:hasSample
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:FeatureOfInterest ;
+  rdfs:range sosa:Observation .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Proboscidea>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order> ;
+  rdfs:comment """Any of an order (Proboscidea) of large mammals comprising the elephants and extinct related forms.
+https://www.merriam-webster.com/dictionary/proboscidean""" .
+
+ns0:Path
+  a owl:NamedIndividual ;
+  ns0:hasPath "example.com"^^xsd:anyURI ;
+  skos:definition "The URI to point at the location of the image in secure cloud" .
+
+ns0:python a owl:NamedIndividual, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Reptilia>, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Squamata>, <https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata>, sosa:FeatureOfInterest .
+ns0:hasMoisture
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+geo:long
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Point ;
+  rdfs:range [
+    a owl:Restriction ;
+    owl:onProperty ns0:hasValue ;
+    owl:someValuesFrom rdfs:Literal
+  ] .
+
+ns0:Disturbance
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasDisturbance "logged" ;
+  skos:definition "degree of logging at the site, on of \"Old-growth\", \"Twic logged\", Logged\" (when number of logging operations unknown)" .
+
+ns0:python#Juling
+  a owl:NamedIndividual, sosa:Sensor ;
+  owl:sameAs ns0:python ;
+  sosa:hasFeatureOfInterest ns0:python ;
+  sosa:observedProperty ns0:DateTime, ns0:HDOP, ns0:Speed ;
+  rdfs:comment "A python (snake) called Juling- with tracking device called Juling" .
+
+dc:ProvenanceStatement
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  ns1:prefixIRI "terms:ProvenanceStatement" ;
+  rdfs:comment "Any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "Provenance Statement"@en .
+
+ns0:Elevation_masl
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasElevation_masi "5.2"^^xsd:float ;
+  rdfs:comment "Elevation at the plot centre, in metres above sea level" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Squamata>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Order> .
+
+ns0:hasSilt
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Genus>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  ns1:prefixIRI "wo:Genus" ;
+  rdfs:comment "A genus is a scientific way of showing that species are very closed related to each other. In fact the first word of the species' scientific name is its genus. So for lions (Panthera leo), Panthera is the genus and tells us that they are closely related to tigers (Panthera tigris), because they share the name"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "Genus"@en-gb ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Genus>, <http://www.bbc.co.uk/nature/genus> ;
+  ns2:term_status "testing" .
+
+ns0:elephant#Puteri
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:HDOP, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Puteri here, the GPS collar (sensor) is named after her." .
+
+ns0:hasLand_Use
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+sosa:observedProperty
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range sosa:ObservableProperty .
+
+<http://web.resource.org/cc/Prohibition>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#family>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Family> ;
+  rdfs:comment "associates a taxon rank with a family"@en-gb ;
+  rdfs:isDefinedBy <https://www.bbc.co.uk/ontologies/wildlife-ontology#> ;
+  rdfs:label "family"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:hasTemperature
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:double .
+
+dc:relation a owl:AnnotationProperty .
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom/Animalia>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom> ;
+  rdfs:comment """Animalia is the scientific grouping that includes all animals. Scientists, historians, and others classify similar things together, using a taxonomy.
+
+All members of the kingdom Animalia share three key traits. They are multicellular organisms, and they are all eukaryotic, meaning their cells have membrane-enclosed organelles and a nucleus. All animals are heterotrophic and must feed on other organisms to survive.
+source:https://study.com/learn/lesson/animalia-kingdom-examples-characteristics-facts.html""" .
+
+ns0:elephant#Tulid
+  a owl:NamedIndividual, sosa:Sensor ;
+  sosa:observedProperty ns0:Count, ns0:Cov, ns0:Direction, ns0:Distance, ns0:ExtTemp, ns0:GMTDate, ns0:GMTTime, ns0:Speed, ns0:Temperature ;
+  rdfs:comment "A female asian elephant called Tulid, here, the GPS collar (sensor) is named after her." .
+
+ns0:hasDirection
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:DateTime
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:resultTime "2013-07-06T21:03:17"^^xsd:dateTime ;
+  rdfs:comment "The date and time of the GPS collar observation" .
+
+<http://web.resource.org/cc/License>
+  a owl:Class ;
+  rdfs:subClassOf dc:LicenseDocument .
+
+geo:location
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf foaf:based_near ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range geo:SpatialThing ;
+  rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """ ;
+  rdfs:label "location" .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#class>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank> ;
+  rdfs:range <https://www.bbc.co.uk/ontologies/wildlife-ontology#Class> .
+
+ns0:hasSand
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns3:preferredNamespaceUri
+  a owl:AnnotationProperty ;
+  ns3:preferredNamespaceUri "https://w3id.org/def/foo#>" .
+
+ns0:Temperature
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasTemperature 2.100000e+1 ;
+  rdfs:comment "Estimate temperature of the elephant in Celsius at data collection instant." .
+
+ns0:total_C
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasTotal_C "22.23"^^xsd:float ;
+  skos:definition "total carbon content of the soil sample" .
+
+ns0:hasCov
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:integer .
+
+ns0:ExtTemp
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasTemp 2.700000e+1 ;
+  rdfs:comment "External Temperature of the elephant at data collection instant" .
+
+ns0:Clay
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasClay "2.3"^^xsd:float .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Mammalia>
+  a owl:Class ;
+  rdfs:subClassOf <https://www.bbc.co.uk/ontologies/wildlife-ontology#Class> ;
+  rdfs:comment """The highest class of the subphylum Vertebrata comprising humans and all other animals that nourish their young with milk secreted by mammary glands.
+https://www.merriam-webster.com/dictionary/Elephantidae""" .
+
+ns0:Mustelidae
+  a owl:NamedIndividual, sosa:FeatureOfInterest ;
+  ns5:family ns0:Mustelidae .
+
+ns0:Soil_Moisture
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasMoisture 225 ;
+  skos:definition "Gravimetric soil moisture" .
+
+ns0:hasInorganic_P
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:Horizon
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:hasSimpleResult "Sample_Name" ;
+  skos:definition "Soil horizon sampled" .
+
+ns0:timestamp
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  sosa:resultTime "2014-04-12T13:20:00"^^xsd:dateTime ;
+  rdfs:comment "The time of the sensor observation." .
+
+ns0:Lat
+  a owl:NamedIndividual, geo:Point ;
+  rdfs:comment "The geographical latitude of the observation location" .
+
+sosa:isFeatureOfInterestOf
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:Observation ;
+  rdfs:range sosa:FeatureOfInterest ;
+  skos:definition "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en .
+
+ns5:genus
+  a owl:ObjectProperty ;
+  rdfs:domain ns5:TaxonRank ;
+  rdfs:range ns5:Genus ;
+  rdfs:comment "associates a taxon rank with a genus"@en-gb ;
+  rdfs:isDefinedBy ns5: ;
+  rdfs:label "genus"@en-gb ;
+  ns2:term_status "testing" .
+
+ns0:hasElevation_masi
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:float .
+
+ns0:hasTree_notes
+  a owl:DatatypeProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range xsd:string .
+
+ns0:Soil_pH
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasSoil_pH "4.87"^^xsd:float ;
+  skos:definition "Measured pH of the soil sample" .
+
+<http://web.resource.org/cc/Work>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Carnivora>
+  a owl:Class ;
+  rdfs:subClassOf ns5:Order ;
+  rdfs:comment "Carnivora is a monophyletic order of placental mammals consisting of the most recent common ancestor of all cats and dogs, and all descendants of that ancestor. Members of this group are formally referred to as carnivorans, and have evolved to specialize in eating flesh." ;
+  rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Carnivora" .
+
+ns1:prefixIRI a owl:AnnotationProperty .
+ns0:Name
+  a owl:NamedIndividual, sosa:ObservableProperty ;
+  ns0:hasName "Imahe_name" ;
+  skos:definition "The named assigned to an image at collection time" .
+
+<http://web.resource.org/cc/Requirement>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+ns0:Silt a owl:NamedIndividual .
+foaf:Person
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+dc:rights a owl:AnnotationProperty .
+ns0:Site
+  a owl:NamedIndividual, sosa:FeatureOfInterest ;
+  sosa:hasSimpleResult "\"Valley\"" ;
+  skos:definition "Geographical area/site which samples were taken from" .
+
+dc:description a owl:AnnotationProperty .
+xhv:license a owl:NamedIndividual .
+sosa:observes
+  a owl:ObjectProperty ;
+  rdfs:domain sosa:ObservableProperty ;
+  rdfs:range sosa:Observation .
+
+<http://www.w3.org/2001/XMLSchema-datatypes#date>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+schema:rangeIncludes a owl:AnnotationProperty .
+ns3:preferredNamespacePrefix
+  a owl:AnnotationProperty ;
+  ns3:preferredNamespacePrefix "foo" .
+
+geo:lat_long
+  rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." ;
+  rdfs:label "lat/long" .
+
+ns4:relativeLocation a owl:AnnotationProperty .
